@@ -1,4 +1,4 @@
-package screens;
+package roguelike.screens;
 
 import asciiPanel.AsciiPanel;
 
