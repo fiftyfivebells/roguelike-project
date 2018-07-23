@@ -8,7 +8,7 @@ public class ApplicationMain extends JFrame {
 
     public ApplicationMain() {
         super();
-        terminal = new AsciiPanel();
+        terminal = new AsciiPanel(100, 40);
         terminal.write("roguelike project, first commit", 1, 1);
         add(terminal);
         pack();
