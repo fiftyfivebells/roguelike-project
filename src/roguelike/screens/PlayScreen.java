@@ -14,7 +14,7 @@ public class PlayScreen implements Screen {
     private int screenWidth;
     private int screenHeight;
 
-    public playScreen() {
+    public PlayScreen() {
         screenWidth = 80;
         screenHeight = 21;
         createWorld();
