@@ -69,13 +69,13 @@ public class PlayScreen implements Screen {
             case KeyEvent.VK_L:
             case KeyEvent.VK_RIGHT: scrollBy(1, 0);   break;
             case KeyEvent.VK_K:
-            case KeyEvent.VK_UP:    scrollBy(0, 1);   break;
+            case KeyEvent.VK_UP:    scrollBy(0, -1);   break;
             case KeyEvent.VK_J:
-            case KeyEvent.VK_DOWN:  scrollBy(0, -1);  break;
-            case KeyEvent.VK_Y:     scrollBy(-1, 1);  break;
-            case KeyEvent.VK_U:     scrollBy(1, 1);   break;
-            case KeyEvent.VK_B:     scrollBy(-1, -1); break;
-            case KeyEvent.VK_N:     scrollBy(1, -1);  break;
+            case KeyEvent.VK_DOWN:  scrollBy(0, 1);  break;
+            case KeyEvent.VK_Y:     scrollBy(-1, -1);  break;
+            case KeyEvent.VK_U:     scrollBy(1, -1);   break;
+            case KeyEvent.VK_B:     scrollBy(-1, 1); break;
+            case KeyEvent.VK_N:     scrollBy(1, 1);  break;
         }
         return this;
     }
