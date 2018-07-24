@@ -39,4 +39,8 @@ public class Creature {
     public void setAi(CreatureAI ai) {
         this.ai = ai;
     }
+
+    public void dig(int wx, int wy) {
+        world.dig(wx, wy);
+    }
 }
