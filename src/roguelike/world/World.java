@@ -1,5 +1,7 @@
 package roguelike.world;
 
+import roguelike.creature.Creature;
+
 import java.awt.Color;
 
 public class World {
@@ -27,6 +29,20 @@ public class World {
         } else {
             return tiles[x][y];
         }
+    }
+
+    public void addAtEmptyLocation(Creature creature) {
+        int x;
+        int y;
+
+        do {
+            x = (int) (Math.random() * width);
+            y = (int) (Math.random() * height);
+        }
+        while (!tile(x, y).isGround());
+
+        creature.setX(x);
+        creature.setY(y);
     }
 
     public char glyph(int x, int y) {
