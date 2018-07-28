@@ -43,4 +43,8 @@ public class Creature {
     public void dig(int wx, int wy) {
         world.dig(wx, wy);
     }
+
+    public void moveBy(int mx, int my) {
+        ai.onEnter(x+mx, y+my, world.tile(x+mx, y+my));
+    }
 }
