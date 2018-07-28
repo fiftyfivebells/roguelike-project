@@ -28,6 +28,10 @@ public class Creature {
         return y;
     }
 
+    public int setX(int x) { this.x = x; }
+
+    public int setY(int y) { this.y = y; }
+
     public char getGlyph() {
         return glyph;
     }
