@@ -13,7 +13,7 @@ public class CreatureFactory {
     public Creature newPlayer() {
         Creature player = new Creature(world, '@', AsciiPanel.brightWhite);
         world.addAtEmptyLocation(player);
-        new playerAi(player);
+        new PlayerAI(player);
         return player;
     }
 }
