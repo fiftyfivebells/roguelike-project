@@ -1,6 +1,8 @@
 package roguelike.screens;
 
 import asciiPanel.AsciiPanel;
+import roguelike.creature.Creature;
+import roguelike.creature.CreatureFactory;
 import roguelike.world.World;
 import roguelike.world.WorldBuilder;
 
@@ -9,8 +11,8 @@ import java.awt.event.KeyEvent;
 public class PlayScreen implements Screen {
 
     private World world;
-    private int centerX;
-    private int centerY;
+    Creature player;
+    CreatureFactory cf;
     private int screenWidth;
     private int screenHeight;
 
@@ -18,6 +20,8 @@ public class PlayScreen implements Screen {
         screenWidth = 80;
         screenHeight = 21;
         createWorld();
+        cf = new CreatureFactory(world);
+        player = cf.newPlayer();
     }
 
     public void createWorld() {
@@ -27,11 +31,11 @@ public class PlayScreen implements Screen {
     }
 
     public int getScrollX() {
-        return Math.max(0, Math.min(centerX - screenWidth / 2, world.getWidth() - screenWidth));
+        return Math.max(0, Math.min(player.getX() - screenWidth / 2, world.getWidth() - screenWidth));
     }
 
     public int getScrollY() {
-        return Math.max(0, Math.min(centerY - screenHeight / 2, world.getHeight() - screenWidth));
+        return Math.max(0, Math.min(player.getY() - screenHeight / 2, world.getHeight() - screenWidth));
     }
 
     private void displayTiles(AsciiPanel terminal, int left, int top) {
@@ -45,17 +49,12 @@ public class PlayScreen implements Screen {
         }
     }
 
-    private void scrollBy(int mx, int my) {
-        centerX = Math.max(0, Math.min(centerX + mx, world.getWidth() - 1));
-        centerY = Math.max(0, Math.min(centerY + my, world.getHeight() - 1));
-    }
-
     @Override
     public void displayOutput(AsciiPanel terminal) {
         int left = getScrollX();
         int top = getScrollY();
         displayTiles(terminal, left, top);
-        terminal.write('X', centerX - left, centerY - top);
+        terminal.write(player.getGlyph(), player.getX() - left, player.getY() - top);
         terminal.writeCenter(" -- press [escape] to lose or [enter] to win.", 22);
     }
 
@@ -65,17 +64,17 @@ public class PlayScreen implements Screen {
             case KeyEvent.VK_ESCAPE: return new LoseScreen();
             case KeyEvent.VK_ENTER: return new WinScreen();
             case KeyEvent.VK_H:
-            case KeyEvent.VK_LEFT:  scrollBy(-1, 0);  break;
+            case KeyEvent.VK_LEFT:  player.moveBy(-1, 0);  break;
             case KeyEvent.VK_L:
-            case KeyEvent.VK_RIGHT: scrollBy(1, 0);   break;
+            case KeyEvent.VK_RIGHT: player.moveBy(1, 0);   break;
             case KeyEvent.VK_K:
-            case KeyEvent.VK_UP:    scrollBy(0, -1);   break;
+            case KeyEvent.VK_UP:    player.moveBy(0, -1);   break;
             case KeyEvent.VK_J:
-            case KeyEvent.VK_DOWN:  scrollBy(0, 1);  break;
-            case KeyEvent.VK_Y:     scrollBy(-1, -1);  break;
-            case KeyEvent.VK_U:     scrollBy(1, -1);   break;
-            case KeyEvent.VK_B:     scrollBy(-1, 1); break;
-            case KeyEvent.VK_N:     scrollBy(1, 1);  break;
+            case KeyEvent.VK_DOWN:  player.moveBy(0, 1);  break;
+            case KeyEvent.VK_Y:     player.moveBy(-1, -1);  break;
+            case KeyEvent.VK_U:     player.moveBy(1, -1);   break;
+            case KeyEvent.VK_B:     player.moveBy(-1, 1); break;
+            case KeyEvent.VK_N:     player.moveBy(1, 1);  break;
         }
         return this;
     }
