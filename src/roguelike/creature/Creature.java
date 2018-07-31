@@ -49,7 +49,7 @@ public class Creature {
     }
 
     public void moveBy(int mx, int my) {
-        Creature other = world.placeCreature(mx, my);
+        Creature other = world.placeCreature(x + mx, y + my);
 
         if (other == null) {
             ai.onEnter(x+mx, y+my, world.tile(x+mx, y+my));
