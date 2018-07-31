@@ -1,6 +1,7 @@
 package roguelike.creature;
 
 import asciiPanel.AsciiPanel;
+import roguelike.creature.creatures.FungusAI;
 import roguelike.world.World;
 
 public class CreatureFactory {
@@ -15,5 +16,11 @@ public class CreatureFactory {
         world.addAtEmptyLocation(player);
         new PlayerAI(player);
         return player;
+    }
+
+    public Creature newFungus() {
+        Creature fungus = new Creature(world, 'm', AsciiPanel.brightGreen);
+        new FungusAI(fungus);
+        return fungus;
     }
 }
