@@ -60,6 +60,10 @@ public class World {
         creatures.add(creature);
     }
 
+    public void remove(Creature c) {
+        creatures.remove(c);
+    }
+
     public char glyph(int x, int y) {
         return tile(x, y).getGlyph();
     }
