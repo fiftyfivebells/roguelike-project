@@ -67,6 +67,6 @@ public class Creature {
     }
 
     public void update() {
-        ai.update();
+        ai.onUpdate();
     }
 }
