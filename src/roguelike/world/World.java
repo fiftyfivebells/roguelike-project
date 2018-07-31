@@ -20,6 +20,8 @@ public class World {
         return height;
     }
 
+    public List<Creature> getCreatures() { return creatures; }
+
     public World(Tile[][] tiles) {
         this.tiles = tiles;
         this.width = tiles.length;

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/roguelike/world/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/world/World.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,7 +31,7 @@
       <file leaf-file-name="Tile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/world/Tile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
+            <state relative-caret-position="494">
               <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -46,10 +47,11 @@
       <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/world/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+            <state relative-caret-position="342">
+              <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#239#249#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,8 +69,11 @@
       <file leaf-file-name="PlayScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            <state relative-caret-position="551">
+              <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,6 +195,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="roguelike" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roguelike" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roguelike" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="roguelike" type="462c0819:PsiDirectoryNode" />
+              <item name="world" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -518,7 +530,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532814652225</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Update world class with creature list">
+      <created>1532997502332</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1532997502332</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Initialize creature arraylist">
+      <created>1532997899038</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1532997899038</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -585,8 +611,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Remove redundant modifiers" />
-    <MESSAGE value="Fix typo in switch conditions" />
     <MESSAGE value="Move screens package into new rogeulike package" />
     <MESSAGE value="Make new roguelike package, update ApplicationMain" />
     <MESSAGE value="Add world package" />
@@ -610,7 +634,9 @@
     <MESSAGE value="Fix return values on setters" />
     <MESSAGE value="Fix typo in constructor" />
     <MESSAGE value="Refactor PlayScreen to use CreatureFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor PlayScreen to use CreatureFactory" />
+    <MESSAGE value="Update world class with creature list" />
+    <MESSAGE value="Initialize creature arraylist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialize creature arraylist" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/ApplicationMain.java">
@@ -643,6 +669,7 @@
           <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#239#249#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -685,6 +712,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -718,6 +748,7 @@
           <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#239#249#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -776,6 +807,7 @@
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#239#249#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -908,31 +940,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/creature/CreatureAI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/world/Tile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#554#555#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -963,19 +974,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/world/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="551">
+          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/world/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+        <state relative-caret-position="342">
+          <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#239#249#0" expanded="true" />
           </folding>
         </state>
       </provider>

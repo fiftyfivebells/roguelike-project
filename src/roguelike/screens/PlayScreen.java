@@ -47,6 +47,8 @@ public class PlayScreen implements Screen {
                 terminal.write(world.glyph(wx, wy), i, j, world.color(wx, wy));
             }
         }
+
+        
     }
 
     @Override
