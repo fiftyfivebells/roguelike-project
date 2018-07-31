@@ -21,7 +21,15 @@ public class PlayScreen implements Screen {
         screenHeight = 21;
         createWorld();
         cf = new CreatureFactory(world);
-        player = cf.newPlayer();
+        createCreatures(cf);
+    }
+
+    private void createCreatures(CreatureFactory creatureFactory) {
+        player = creatureFactory.newPlayer();
+
+        for (int i = 0; i < 8; i++) {
+            creatureFactory.newFungus();
+        }
     }
 
     public void createWorld() {
