@@ -64,6 +64,12 @@ public class World {
         creatures.remove(c);
     }
 
+    public void update() {
+        for (Creature c : creatures) {
+            c.update();
+        }
+    }
+
     public char glyph(int x, int y) {
         return tile(x, y).getGlyph();
     }

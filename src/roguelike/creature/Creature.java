@@ -58,7 +58,15 @@ public class Creature {
         }
     }
 
+    public boolean canEnter(int x, int y) {
+        return world.tile(x, y).isGround() && world.placeCreature(x, y) == null;
+    }
+
     public void attack(Creature c) {
         world.remove(c);
+    }
+
+    public void update() {
+        ai.update();
     }
 }
