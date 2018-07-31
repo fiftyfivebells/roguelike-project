@@ -20,6 +20,7 @@ public class CreatureFactory {
 
     public Creature newFungus() {
         Creature fungus = new Creature(world, 'm', AsciiPanel.brightGreen);
+        world.addAtEmptyLocation(fungus);
         new FungusAI(fungus);
         return fungus;
     }
