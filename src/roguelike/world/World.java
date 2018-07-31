@@ -3,9 +3,11 @@ package roguelike.world;
 import roguelike.creature.Creature;
 
 import java.awt.Color;
+import java.util.List;
 
 public class World {
     private Tile[][] tiles;
+    private List<Creature> creatures;
     private int width;
     private int height;
 
@@ -31,6 +33,15 @@ public class World {
         }
     }
 
+    public Creature placeCreature(int x, int y) {
+        for (Creature c : creatures) {
+            if (c.getX() == x && c.getY() == y) {
+                return c;
+            }
+        }
+        return null;
+    }
+
     public void addAtEmptyLocation(Creature creature) {
         int x;
         int y;
@@ -39,10 +50,11 @@ public class World {
             x = (int) (Math.random() * width);
             y = (int) (Math.random() * height);
         }
-        while (!tile(x, y).isGround());
+        while (!tile(x, y).isGround() && placeCreature(x, y) != null);
 
         creature.setX(x);
         creature.setY(y);
+        creatures.add(creature);
     }
 
     public char glyph(int x, int y) {
