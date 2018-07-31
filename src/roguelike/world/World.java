@@ -3,11 +3,12 @@ package roguelike.world;
 import roguelike.creature.Creature;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import java.util.List;
 
 public class World {
     private Tile[][] tiles;
-    private List<Creature> creatures;
+    private List<Creature> creatures = new ArrayList<Creature>();
     private int width;
     private int height;
 
