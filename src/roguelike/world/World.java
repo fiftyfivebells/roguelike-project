@@ -65,7 +65,8 @@ public class World {
     }
 
     public void update() {
-        for (Creature c : creatures) {
+        List<Creature> toUpdate = new ArrayList(creatures);
+        for (Creature c : toUpdate) {
             c.update();
         }
     }
