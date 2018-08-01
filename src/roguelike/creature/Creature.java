@@ -14,6 +14,11 @@ public class Creature {
     private char glyph;
     private Color color;
 
+    private int HP;
+    private int maxHP;
+    private int attackValue;
+    private int defenseValue;
+
     public Creature(World world, char glyph, Color color) {
         this.world = world;
         this.glyph = glyph;
@@ -32,6 +37,22 @@ public class Creature {
 
     public void setY(int y) { this.y = y; }
 
+    public int getHP() { return HP; }
+
+    public void setHP(int HP) { this.HP = HP; }
+
+    public int getMaxHP() { return maxHP; }
+
+    public void setMaxHP(int maxHP) { this.maxHP = maxHP; }
+
+    public int getAttackValue() { return attackValue; }
+
+    public void setAttackValue(int attackValue) { this.attackValue = attackValue; }
+
+    public int getDefenseValue() { return defenseValue; }
+
+    public void setDefenseValue(int defenseValue) { this.defenseValue = defenseValue; }
+
     public char getGlyph() {
         return glyph;
     }
@@ -46,6 +67,22 @@ public class Creature {
 
     public void dig(int wx, int wy) {
         world.dig(wx, wy);
+    }
+
+    public void attack(Creature other) {
+        int amount = Math.max(0, getAttackValue() - other.getDefenseValue());
+
+        amount = (int) (Math.random() * amount) + 1;
+
+        other,modifyHP(-amount);
+    }
+
+    public void modifyHP(int amount) {
+        HP += amount;
+
+        if (HP < 1) {
+            world.remove(this);
+        }
     }
 
     public void moveBy(int mx, int my) {
