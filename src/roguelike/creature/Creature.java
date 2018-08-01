@@ -19,10 +19,13 @@ public class Creature {
     private int attackValue;
     private int defenseValue;
 
-    public Creature(World world, char glyph, Color color) {
+    public Creature(World world, char glyph, Color color, int hp, int atk, int def) {
         this.world = world;
         this.glyph = glyph;
         this.color = color;
+        this.maxHP = hp;
+        this.attackValue = atk;
+        this.defenseValue = def;
     }
 
     public int getX() {
