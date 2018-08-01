@@ -77,7 +77,7 @@ public class Creature {
 
         amount = (int) (Math.random() * amount) + 1;
 
-        other,modifyHP(-amount);
+        other.modifyHP(-amount);
     }
 
     public void modifyHP(int amount) {
@@ -100,10 +100,6 @@ public class Creature {
 
     public boolean canEnter(int x, int y) {
         return world.tile(x, y).isGround() && world.placeCreature(x, y) == null;
-    }
-
-    public void attack(Creature c) {
-        world.remove(c);
     }
 
     public void update() {
