@@ -14,7 +14,7 @@ public class Creature {
     private char glyph;
     private Color color;
 
-    private int HP;
+    private int currentHP;
     private int maxHP;
     private int attackValue;
     private int defenseValue;
@@ -24,7 +24,7 @@ public class Creature {
         this.glyph = glyph;
         this.color = color;
         this.maxHP = hp;
-        this.HP = hp;
+        this.currentHP = hp;
         this.attackValue = atk;
         this.defenseValue = def;
     }
@@ -41,9 +41,9 @@ public class Creature {
 
     public void setY(int y) { this.y = y; }
 
-    public int getHP() { return HP; }
+    public int getCurrentHP() { return currentHP; }
 
-    public void setHP(int HP) { this.HP = HP; }
+    public void setCurrentHP(int currentHP) { this.currentHP = currentHP; }
 
     public int getMaxHP() { return maxHP; }
 
@@ -82,9 +82,9 @@ public class Creature {
     }
 
     public void modifyHP(int amount) {
-        HP += amount;
+        currentHP += amount;
 
-        if (HP < 1) {
+        if (currentHP < 1) {
             world.remove(this);
         }
     }
