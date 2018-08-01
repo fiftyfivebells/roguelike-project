@@ -100,10 +100,16 @@ public class Creature {
     }
 
     public boolean canEnter(int x, int y) {
+
         return world.tile(x, y).isGround() && world.placeCreature(x, y) == null;
     }
 
     public void update() {
+
         ai.onUpdate();
+    }
+
+    public void notify(String message, Object ... params) {
+        ai.onNotify(String.format(message, params));
     }
 }
