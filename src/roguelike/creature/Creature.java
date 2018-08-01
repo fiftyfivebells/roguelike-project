@@ -24,6 +24,7 @@ public class Creature {
         this.glyph = glyph;
         this.color = color;
         this.maxHP = hp;
+        this.HP = hp;
         this.attackValue = atk;
         this.defenseValue = def;
     }
