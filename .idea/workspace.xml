@@ -92,7 +92,7 @@
       <file leaf-file-name="Creature.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-209">
+            <state relative-caret-position="-152">
               <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -316,13 +316,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Fix typo in displayOutput method">
-      <created>1532345388301</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1532345388301</updated>
     </task>
     <task id="LOCAL-00009" summary="Remove redundant modifiers">
       <created>1532345525333</created>
@@ -660,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533088732641</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Rename HP property">
+      <created>1533088846716</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1533088846717</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create CreatureFactory class" />
     <MESSAGE value="Create addAtEmptyLocation method in World" />
     <MESSAGE value="Fix return values on setters" />
     <MESSAGE value="Fix typo in constructor" />
@@ -752,7 +751,8 @@
     <MESSAGE value="Update constructors with new values" />
     <MESSAGE value="Fix typos, remove extra method" />
     <MESSAGE value="Initialize HP value in constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialize HP value in constructor" />
+    <MESSAGE value="Rename HP property" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename HP property" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/ApplicationMain.java">
@@ -1241,7 +1241,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
+        <state relative-caret-position="-152">
           <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
