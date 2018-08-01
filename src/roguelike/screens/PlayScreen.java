@@ -71,6 +71,9 @@ public class PlayScreen implements Screen {
         displayTiles(terminal, left, top);
         terminal.write(player.getGlyph(), player.getX() - left, player.getY() - top);
         terminal.writeCenter(" -- press [escape] to lose or [enter] to win.", 22);
+
+        String stats = String.format(" %3d/%3d hp", player.getCurrentHP(), player.getMaxHP());
+        terminal.write(stats, 1, 23);
     }
 
     @Override
