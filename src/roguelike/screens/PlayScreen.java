@@ -7,6 +7,7 @@ import roguelike.world.World;
 import roguelike.world.WorldBuilder;
 
 import java.awt.event.KeyEvent;
+import java.util.List;
 
 public class PlayScreen implements Screen {
 
@@ -66,6 +67,15 @@ public class PlayScreen implements Screen {
         }
     }
 
+    private void displayMessages(AsciiPanel terminal, List<String> messages) {
+        int top = screenHeight - messages.size();
+
+        for (int i = 0; i < messages.size(); i++) {
+            terminal.writeCenter(messages.get(i), top + i);
+        }
+        messages.clear();
+    }
+
     @Override
     public void displayOutput(AsciiPanel terminal) {
         int left = getScrollX();
@@ -76,6 +86,7 @@ public class PlayScreen implements Screen {
 
         String stats = String.format(" %3d/%3d hp", player.getCurrentHP(), player.getMaxHP());
         terminal.write(stats, 1, 23);
+        displayMessages(terminal, messages);
     }
 
     @Override
