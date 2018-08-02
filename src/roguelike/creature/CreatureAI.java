@@ -14,5 +14,5 @@ public class CreatureAI {
 
     public void onUpdate() {}
 
-    public void onNotify(String message, Object ... params) {}
+    public void onNotify(String message) {}
 }
