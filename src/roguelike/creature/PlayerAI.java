@@ -4,13 +4,13 @@ import roguelike.world.Tile;
 
 import java.util.List;
 
-public class PlayerAI extends CreatureAI
+public class PlayerAI extends CreatureAI {
 
     private List<String> messages;
 
     public PlayerAI(Creature creature, List<String> messages) {
         super(creature);
-        this,messages = messages;
+        this.messages = messages;
     }
 
     @Override
@@ -25,4 +25,5 @@ public class PlayerAI extends CreatureAI
 
     public void onNotify(String message) {
         messages.add(message);
+    }
 }
