@@ -4,6 +4,8 @@ import asciiPanel.AsciiPanel;
 import roguelike.creature.creatures.FungusAI;
 import roguelike.world.World;
 
+import java.util.List;
+
 public class CreatureFactory {
     private World world;
 
@@ -11,10 +13,10 @@ public class CreatureFactory {
         this.world = world;
     }
 
-    public Creature newPlayer() {
+    public Creature newPlayer(List<String> messages) {
         Creature player = new Creature(world, '@', AsciiPanel.brightWhite, 100, 20, 5);
         world.addAtEmptyLocation(player);
-        new PlayerAI(player);
+        new PlayerAI(player, messages);
         return player;
     }
 
