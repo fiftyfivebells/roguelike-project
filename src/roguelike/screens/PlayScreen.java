@@ -72,7 +72,7 @@ public class PlayScreen implements Screen {
         int top = screenHeight - messages.size();
 
         for (int i = 0; i < messages.size(); i++) {
-            terminal.writeCenter(messages.get(i), top + i);
+            terminal.writeCenter(messages.get(i), top + i + 1);
         }
         messages.clear();
     }
@@ -84,7 +84,7 @@ public class PlayScreen implements Screen {
         displayTiles(terminal, left, top);
         displayMessages(terminal, messages);
 
-        terminal.writeCenter(" -- press [escape] to lose or [enter] to win.", 22);
+        terminal.writeCenter(" -- press [escape] to lose or [enter] to win.", 23);
 
         String stats = String.format(" %3d/%3d hp", player.getCurrentHP(), player.getMaxHP());
         terminal.write(stats, 1, 23);
