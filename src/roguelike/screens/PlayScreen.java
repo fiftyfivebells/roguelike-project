@@ -15,17 +15,19 @@ public class PlayScreen implements Screen {
     CreatureFactory cf;
     private int screenWidth;
     private int screenHeight;
+    private List<String> messages;
 
     public PlayScreen() {
         screenWidth = 80;
         screenHeight = 21;
+        messages = new ArrayList<String>();
         createWorld();
         cf = new CreatureFactory(world);
         createCreatures(cf);
     }
 
     private void createCreatures(CreatureFactory creatureFactory) {
-        player = creatureFactory.newPlayer();
+        player = creatureFactory.newPlayer(messages);
 
         for (int i = 0; i < 8; i++) {
             creatureFactory.newFungus();
