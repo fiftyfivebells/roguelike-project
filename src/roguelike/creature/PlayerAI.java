@@ -2,9 +2,15 @@ package roguelike.creature;
 
 import roguelike.world.Tile;
 
-public class PlayerAI extends CreatureAI {
-    public PlayerAI(Creature creature) {
+import java.util.List;
+
+public class PlayerAI extends CreatureAI
+
+    private List<String> messages;
+
+    public PlayerAI(Creature creature, List<String> messages) {
         super(creature);
+        this,messages = messages;
     }
 
     @Override
@@ -16,4 +22,7 @@ public class PlayerAI extends CreatureAI {
             creature.dig(x, y);
         }
     }
+
+    public void onNotify(String message) {
+        messages.add(message);
 }
