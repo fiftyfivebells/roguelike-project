@@ -24,6 +24,7 @@ public class PlayerAI extends CreatureAI {
     }
 
     public void onNotify(String message) {
+
         messages.add(message);
     }
 }
