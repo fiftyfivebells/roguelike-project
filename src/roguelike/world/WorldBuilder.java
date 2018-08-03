@@ -1,16 +1,23 @@
 package roguelike.world;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 public class WorldBuilder {
     private int width;
     private int height;
     private int depth;
     private Tile[][][] tiles;
+    private int[][][] regions;
 
     public WorldBuilder(int width, int height, int depth) {
         this.height = height;
         this.width = width;
         this.depth = depth;
         this.tiles = new Tile[width][height][depth];
+        this.regions = new int[width][height][depth];
     }
 
     public World build() {
@@ -18,7 +25,7 @@ public class WorldBuilder {
     }
 
     public WorldBuilder createRegions() {
-        int[][][] regions = new int[width][height][depth];
+        regions = new int[width][height][depth];
 
         for (int z = 0; z < depth; z++) {
             for (int x = 0; x < width; x++) {
@@ -34,6 +41,94 @@ public class WorldBuilder {
             }
         }
         return this;
+    }
+
+    private void removeRegion(int region, int z) {
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                if (regions[x][y][z] == region) {
+                    regions[x][y][z] = 0;
+                    tiles[x][y][z] = Tile.WALL;
+                }
+            }
+        }
+    }
+
+    private int fillRegion(int region, int x, int y, int z) {
+        int size = 1;
+        ArrayList<Point> open = new ArrayList<Point>();
+        open.add(new Point(x, y, z));
+        regions[x][y][z] = region;
+
+        while (!open.isEmpty()) {
+            Point p = open.remove(0);
+
+            for (Point neighbor : p.neighbors()) {
+                if (regions[neighbor.getX()][neighbor.getY()][neighbor.getZ()] > 0 ||
+                tiles[neighbor.getX()][neighbor.getY()][neighbor.getZ()] == Tile.WALL) {
+                    continue;
+                }
+                size++;
+                regions[neighbor.getX()][neighbor.getY()][neighbor.getZ()]= region;
+                open.add(neighbor);
+            }
+        }
+    }
+
+    public WorldBuilder connectRegions() {
+        for (int z = 0; z < depth - 1; z++) {
+            connectRegionsDown(z);
+        }
+        return this;
+    }
+
+    private void connectRegionsDown(int z) {
+        List<String> connected = new ArrayList<String>();
+
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                String region = regions[x][y][z] + "," + regions[x][y][z+1];
+                if (tiles[x][y][z] == Tile.FLOOR
+                && tiles[x][y][z+1] == Tile.FLOOR
+                && !connected.contains(region)) {
+                    connected.add(region);
+                    connectRegionsDown(z, regions[x][y][z], regions[x][y][z+1]);
+                }
+            }
+        }
+    }
+
+    private void connectRegionsDown(int z, int r1, int r2) {
+        List<Point> candidates = findRegionOverlap(z, r1, r2);
+
+        int stairs = 0;
+
+        do {
+            Point p = candidates.remove(0);
+            tiles[p.getX()][p.getY()][z] = Tile.STAIRS_DOWN;
+            tiles[p.getX()][p.getY()][z+1] = Tile.STAIRS_UP;
+            stairs++;
+        }
+        while (candidates.size() / stairs > 250);
+    }
+
+    private List<Point> findRegionOverlap(int z, int r1, int r2) {
+        ArrayList<Point> candidates = new ArrayList<Point>();
+
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                if (tiles[x][y][z] == Tile.FLOOR
+                    && tiles[x][y][z+1] == Tile.FLOOR
+                    && regions[x][y][z] == r1
+                    && regions[x][y][z+1] == r2) {
+
+                    candidates.add(new Point(x, y, z));
+                }
+            }
+        }
+
+        Collections.shuffle(candidates);
+        return candidates;
     }
 
     private WorldBuilder randomizeTiles() {
