@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Add message to dig method">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Create a Point class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,14 +24,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2413" />
-          <entry key="txt" value="709" />
+          <entry key="java" value="2693" />
+          <entry key="txt" value="729" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2413" />
-          <entry key="PLAIN_TEXT" value="709" />
+          <entry key="JAVA" value="2693" />
+          <entry key="PLAIN_TEXT" value="729" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -126,9 +126,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/world/Point.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+            <state relative-caret-position="541">
+              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#234#235#0" expanded="true" />
                 <element signature="e#258#259#0" expanded="true" />
                 <element signature="e#289#290#0" expanded="true" />
@@ -141,6 +142,7 @@
                 <element signature="e#470#471#0" expanded="true" />
                 <element signature="e#501#502#0" expanded="true" />
                 <element signature="e#527#528#0" expanded="true" />
+                <element signature="e#633#640#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -289,7 +291,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533257918334" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533258148972" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/rl tut 06" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -355,13 +357,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Create CreatureAI class">
-      <created>1532813075133</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1532813075133</updated>
     </task>
     <task id="LOCAL-00026" summary="Add PlayerAI class">
       <created>1532813265325</created>
@@ -699,7 +694,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533257224831</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Create a Point class">
+      <created>1533257933657</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1533257933657</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TodoView">
@@ -775,7 +777,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update fungus AI to multiply, fix other affected methods" />
     <MESSAGE value="Make new list of updated creatures" />
     <MESSAGE value="Add method call to update world after a move" />
     <MESSAGE value="Fix typo in update methods" />
@@ -800,7 +801,8 @@
     <MESSAGE value="Change line formatting" />
     <MESSAGE value="Display message one line lower" />
     <MESSAGE value="Add message to dig method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add message to dig method" />
+    <MESSAGE value="Create a Point class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create a Point class" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -938,9 +940,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/world/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+        <state relative-caret-position="541">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#234#235#0" expanded="true" />
             <element signature="e#258#259#0" expanded="true" />
             <element signature="e#289#290#0" expanded="true" />
@@ -953,6 +956,7 @@
             <element signature="e#470#471#0" expanded="true" />
             <element signature="e#501#502#0" expanded="true" />
             <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#633#640#0" expanded="true" />
           </folding>
         </state>
       </provider>
