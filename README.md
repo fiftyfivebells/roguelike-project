@@ -7,3 +7,4 @@ My intent here is to get some familiarity with the general concepts and structur
 * more square dungeon rooms instead of random shapes
 * different types of maps (caves, dungeon rooms, forest, etc)
 * possibly use more interfaces to provide behavior to creatures
+* probably abandon the regions thing with the maps (it seems unnecessarily complicated)
