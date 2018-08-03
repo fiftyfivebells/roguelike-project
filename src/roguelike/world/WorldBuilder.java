@@ -3,16 +3,37 @@ package roguelike.world;
 public class WorldBuilder {
     private int width;
     private int height;
-    private Tile[][] tiles;
+    private int depth;
+    private Tile[][][] tiles;
 
-    public WorldBuilder(int width, int height) {
+    public WorldBuilder(int width, int height, int depth) {
         this.height = height;
         this.width = width;
-        this.tiles = new Tile[width][height];
+        this.depth = depth;
+        this.tiles = new Tile[width][height][depth];
     }
 
     public World build() {
         return new World(tiles);
+    }
+
+    public WorldBuilder createRegions() {
+        int[][][] regions = new int[width][height][depth];
+
+        for (int z = 0; z < depth; z++) {
+            for (int x = 0; x < width; x++) {
+                for (int y = 0; y < height; y++) {
+                    if (tiles[x][y][z] != Tile.WALL && regions[x][y][z] == 0) {
+                        int size = fillRegion(nextRegion++, x, y, z);
+
+                        if (size < 25) {
+                            removeRegion(nextRegion - 1, z);
+                        }
+                    }
+                }
+            }
+        }
+        return this;
     }
 
     private WorldBuilder randomizeTiles() {
