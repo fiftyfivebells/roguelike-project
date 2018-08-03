@@ -70,7 +70,9 @@ public class Creature {
     }
 
     public void dig(int wx, int wy) {
+
         world.dig(wx, wy);
+        doAction("dig");
     }
 
     public void attack(Creature other) {
