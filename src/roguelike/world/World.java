@@ -45,7 +45,7 @@ public class World {
         return null;
     }
 
-    public void addAtEmptyLocation(Creature creature) {
+    public void addAtEmptyLocation(Creature creature, int z) {
         int x;
         int y;
 
@@ -53,10 +53,11 @@ public class World {
             x = (int) (Math.random() * width);
             y = (int) (Math.random() * height);
         }
-        while (!tile(x, y).isGround() && placeCreature(x, y) != null);
+        while (!tile(x, y), z.isGround() && placeCreature(x, y, z) != null);
 
         creature.setX(x);
         creature.setY(y);
+        creature.setZ(z);
         creatures.add(creature);
     }
 
