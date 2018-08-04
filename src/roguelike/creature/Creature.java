@@ -109,7 +109,7 @@ public class Creature {
 
                 if (other == this) {
                     other.notify("You " + message + ".", params);
-                } else {
+                } else if (other.canSee(x, y, z)) {
                     other.notify(String.format("The %s %s.", getGlyph(), makeSecondPerson(message)), params);
                 }
             }

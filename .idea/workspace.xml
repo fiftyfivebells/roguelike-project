@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Update glyph/color methods to add creature or tile">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Remove now unnecessary code from displayTiles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,14 +28,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10104" />
-          <entry key="txt" value="1793" />
+          <entry key="java" value="10125" />
+          <entry key="txt" value="1846" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10104" />
-          <entry key="PLAIN_TEXT" value="1793" />
+          <entry key="JAVA" value="10125" />
+          <entry key="PLAIN_TEXT" value="1846" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -95,7 +95,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
@@ -107,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="168" column="38" selection-start-line="168" selection-start-column="38" selection-end-line="168" selection-end-column="38" />
+            <state relative-caret-position="401">
+              <caret line="111" column="50" selection-start-line="111" selection-start-column="50" selection-end-line="111" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4338#4339#0" expanded="true" />
@@ -220,7 +220,6 @@
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/Line.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/CreatureAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/Tile.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/FieldOfView.java" />
@@ -228,6 +227,7 @@
         <option value="$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/World.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
       </list>
     </option>
   </component>
@@ -292,7 +292,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533418743177" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533418812285" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -358,13 +358,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Fix typos, remove extra method">
-      <created>1533088226327</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1533088226327</updated>
     </task>
     <task id="LOCAL-00056" summary="Initialize HP value in constructor">
       <created>1533088732641</created>
@@ -702,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533418593699</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Remove now unnecessary code from displayTiles">
+      <created>1533418765773</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1533418765773</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TodoView">
@@ -778,7 +778,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add up and down stairs to Tile enum" />
     <MESSAGE value="Add createRegions method" />
     <MESSAGE value="Add methods for building and linking regions" />
     <MESSAGE value="Update make caves to make/connect regions" />
@@ -803,7 +802,8 @@
     <MESSAGE value="Override canSee method and create field of view variable" />
     <MESSAGE value="Add fov functionality to creaturefactory and playscreen" />
     <MESSAGE value="Update glyph/color methods to add creature or tile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update glyph/color methods to add creature or tile" />
+    <MESSAGE value="Remove now unnecessary code from displayTiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove now unnecessary code from displayTiles" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -890,20 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="168" column="38" selection-start-line="168" selection-start-column="38" selection-end-line="168" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4338#4339#0" expanded="true" />
-            <element signature="e#4372#4373#0" expanded="true" />
-            <element signature="e#4343#4344#0" expanded="true" />
-            <element signature="e#4371#4372#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/creature/CreatureAI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -980,6 +966,20 @@
           <caret line="69" column="77" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="111" column="50" selection-start-line="111" selection-start-column="50" selection-end-line="111" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4338#4339#0" expanded="true" />
+            <element signature="e#4372#4373#0" expanded="true" />
+            <element signature="e#4343#4344#0" expanded="true" />
+            <element signature="e#4371#4372#0" expanded="true" />
           </folding>
         </state>
       </provider>
