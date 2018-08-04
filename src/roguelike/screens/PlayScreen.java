@@ -58,7 +58,12 @@ public class PlayScreen implements Screen {
                 int wx = i + left;
                 int wy = j + top;
 
-                terminal.write(world.glyph(wx, wy), i, j, world.color(wx, wy));
+                Creature creature = world.placeCreature(wx, wy, player.getZ());
+                if (creature != null) {
+                    terminal.write(creature.getGlyph(), creature.getX() - left, creature.getY() - top, creature.getColor());
+                } else {
+                    terminal.write(world.glyph(wx, wy, player.getZ()), i, j, world.color(wx, wy, player.getZ()));
+                }
             }
         }
 
@@ -98,17 +103,22 @@ public class PlayScreen implements Screen {
             case KeyEvent.VK_ESCAPE: return new LoseScreen();
             case KeyEvent.VK_ENTER: return new WinScreen();
             case KeyEvent.VK_H:
-            case KeyEvent.VK_LEFT:  player.moveBy(-1, 0);  break;
+            case KeyEvent.VK_LEFT:  player.moveBy(-1, 0, 0);  break;
             case KeyEvent.VK_L:
-            case KeyEvent.VK_RIGHT: player.moveBy(1, 0);   break;
+            case KeyEvent.VK_RIGHT: player.moveBy(1, 0, 0);   break;
             case KeyEvent.VK_K:
-            case KeyEvent.VK_UP:    player.moveBy(0, -1);   break;
+            case KeyEvent.VK_UP:    player.moveBy(0, -1, 0);   break;
             case KeyEvent.VK_J:
-            case KeyEvent.VK_DOWN:  player.moveBy(0, 1);  break;
-            case KeyEvent.VK_Y:     player.moveBy(-1, -1);  break;
-            case KeyEvent.VK_U:     player.moveBy(1, -1);   break;
-            case KeyEvent.VK_B:     player.moveBy(-1, 1); break;
-            case KeyEvent.VK_N:     player.moveBy(1, 1);  break;
+            case KeyEvent.VK_DOWN:  player.moveBy(0, 1, 0);  break;
+            case KeyEvent.VK_Y:     player.moveBy(-1, -1, 0);  break;
+            case KeyEvent.VK_U:     player.moveBy(1, -1, 0);   break;
+            case KeyEvent.VK_B:     player.moveBy(-1, 1, 0); break;
+            case KeyEvent.VK_N:     player.moveBy(1, 1, 0);  break;
+        }
+
+        switch(key.getKeyChar()) {
+            case '<': player.moveBy(0, 0, -1); break;
+            case '>': player.moveBy(0, 0, 1); break;
         }
         world.update();;
         return this;
