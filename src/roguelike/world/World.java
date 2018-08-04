@@ -33,7 +33,7 @@ public class World {
     }
 
     public Tile tile(int x, int y, int z) {
-        if (x < 0 || x >= width || y < 0 || y >= height) {
+        if (x < 0 || x >= width || y < 0 || y >= height || z < 0 || z >= depth) {
             return Tile.BOUNDS;
         } else {
             return tiles[x][y][z];
