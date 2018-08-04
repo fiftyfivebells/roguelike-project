@@ -20,6 +20,7 @@ public class Creature {
     private int maxHP;
     private int attackValue;
     private int defenseValue;
+    private int visionRadius;
 
     public Creature(World world, char glyph, Color color, int hp, int atk, int def) {
         this.world = world;
@@ -46,6 +47,10 @@ public class Creature {
     public void setY(int y) { this.y = y; }
 
     public void setZ(int z) { this.z = z; }
+
+    public int getVisionRadius() { return visionRadius; }
+
+    public void setVisionRadius(int visionRadius) { this.visionRadius = visionRadius; }
 
     public int getCurrentHP() { return currentHP; }
 
