@@ -58,7 +58,7 @@ public class World {
             x = (int) (Math.random() * width);
             y = (int) (Math.random() * height);
         }
-        while (!tile(x, y, z).isGround() && placeCreature(x, y, z) != null);
+        while (!tile(x, y, z).isGround() || placeCreature(x, y, z) != null);
 
         creature.setX(x);
         creature.setY(y);
