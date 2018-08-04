@@ -31,13 +31,15 @@ public class PlayScreen implements Screen {
     private void createCreatures(CreatureFactory creatureFactory) {
         player = creatureFactory.newPlayer(messages);
 
-        for (int i = 0; i < 8; i++) {
-            creatureFactory.newFungus();
+        for (int z = 0; z < world.getDepth(); z++) {
+            for (int i = 0; i < 8; i++) {
+                creatureFactory.newFungus(z);
+            }
         }
     }
 
     public void createWorld() {
-        world = new WorldBuilder(90, 31)
+        world = new WorldBuilder(90, 31, 5)
             .makeCaves()
             .build();
     }
@@ -56,14 +58,12 @@ public class PlayScreen implements Screen {
                 int wx = i + left;
                 int wy = j + top;
 
-                terminal.write(world.glyph(wx, wy), i, j, world.color(wx, wy));
-            }
-        }
-
-        for (Creature c : world.getCreatures()) {
-            if ((c.getX() > left && c.getX() < left + screenWidth) &&
-                    (c.getY() > top && c.getY() < top + screenHeight)) {
-                terminal.write(c.getGlyph(), c.getX() - left, c.getY() - top, c.getColor());
+                Creature creature = world.placeCreature(wx, wy, player.getZ());
+                if (creature != null) {
+                    terminal.write(creature.getGlyph(), creature.getX() - left, creature.getY() - top, creature.getColor());
+                } else {
+                    terminal.write(world.glyph(wx, wy, player.getZ()), i, j, world.color(wx, wy, player.getZ()));
+                }
             }
         }
     }
@@ -72,7 +72,7 @@ public class PlayScreen implements Screen {
         int top = screenHeight - messages.size();
 
         for (int i = 0; i < messages.size(); i++) {
-            terminal.writeCenter(messages.get(i), top + i);
+            terminal.writeCenter(messages.get(i), top + i + 1);
         }
         messages.clear();
     }
@@ -82,12 +82,12 @@ public class PlayScreen implements Screen {
         int left = getScrollX();
         int top = getScrollY();
         displayTiles(terminal, left, top);
-        terminal.write(player.getGlyph(), player.getX() - left, player.getY() - top);
-        terminal.writeCenter(" -- press [escape] to lose or [enter] to win.", 22);
+        displayMessages(terminal, messages);
+
+        terminal.writeCenter(" -- press [escape] to lose or [enter] to win.", 23);
 
         String stats = String.format(" %3d/%3d hp", player.getCurrentHP(), player.getMaxHP());
         terminal.write(stats, 1, 23);
-        displayMessages(terminal, messages);
     }
 
     @Override
@@ -96,17 +96,22 @@ public class PlayScreen implements Screen {
             case KeyEvent.VK_ESCAPE: return new LoseScreen();
             case KeyEvent.VK_ENTER: return new WinScreen();
             case KeyEvent.VK_H:
-            case KeyEvent.VK_LEFT:  player.moveBy(-1, 0);  break;
+            case KeyEvent.VK_LEFT:  player.moveBy(-1, 0, 0);  break;
             case KeyEvent.VK_L:
-            case KeyEvent.VK_RIGHT: player.moveBy(1, 0);   break;
+            case KeyEvent.VK_RIGHT: player.moveBy(1, 0, 0);   break;
             case KeyEvent.VK_K:
-            case KeyEvent.VK_UP:    player.moveBy(0, -1);   break;
+            case KeyEvent.VK_UP:    player.moveBy(0, -1, 0);   break;
             case KeyEvent.VK_J:
-            case KeyEvent.VK_DOWN:  player.moveBy(0, 1);  break;
-            case KeyEvent.VK_Y:     player.moveBy(-1, -1);  break;
-            case KeyEvent.VK_U:     player.moveBy(1, -1);   break;
-            case KeyEvent.VK_B:     player.moveBy(-1, 1); break;
-            case KeyEvent.VK_N:     player.moveBy(1, 1);  break;
+            case KeyEvent.VK_DOWN:  player.moveBy(0, 1, 0);  break;
+            case KeyEvent.VK_Y:     player.moveBy(-1, -1, 0);  break;
+            case KeyEvent.VK_U:     player.moveBy(1, -1, 0);   break;
+            case KeyEvent.VK_B:     player.moveBy(-1, 1, 0); break;
+            case KeyEvent.VK_N:     player.moveBy(1, 1, 0);  break;
+        }
+
+        switch(key.getKeyChar()) {
+            case '<': player.moveBy(0, 0, -1); break;
+            case '>': player.moveBy(0, 0, 1); break;
         }
         world.update();;
         return this;

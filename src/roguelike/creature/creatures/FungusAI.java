@@ -24,13 +24,14 @@ public class FungusAI extends CreatureAI {
         int x = creature.getX() + (int) (Math.random() * 11) - 5;
         int y = creature.getY() + (int) (Math.random() * 11) - 5;
 
-        if (!creature.canEnter(x, y)) {
+        if (!creature.canEnter(x, y, creature.getZ())) {
             return;
         }
 
-        Creature child = factory.newFungus();
+        Creature child = factory.newFungus(creature.getZ());
         child.setX(x);
         child.setY(y);
+        child.setZ(creature.getZ());
         spreadCount++;
     }
 }

@@ -10,9 +10,9 @@ public class CreatureAI {
         this.creature.setAi(this);
     }
 
-    public void onEnter(int x, int y, Tile tile) {}
+    public void onEnter(int x, int y, int z, Tile tile) {}
 
     public void onUpdate() {}
 
-    public void onNotify(String message, Object ... params) {}
+    public void onNotify(String message) {}
 }
