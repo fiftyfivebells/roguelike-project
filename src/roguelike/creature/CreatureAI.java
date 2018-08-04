@@ -18,7 +18,7 @@ public class CreatureAI {
         }
 
         if ((creature.getX()-wx) * (creature.getX()-wx) + (creature.getY()-wy) * (creature.getY()-wy) > creature.getVisionRadius()*creature.getVisionRadius()) {
-            return false
+            return false;
         }
 
         for (Point p : new Line(creature.getX(), creature.getY(), wx, wy)) {
