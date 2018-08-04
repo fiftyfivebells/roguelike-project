@@ -1,5 +1,7 @@
-package roguelike.creature;
+package roguelike.creature.creatures;
 
+import roguelike.creature.Creature;
+import roguelike.creature.CreatureAI;
 import roguelike.world.Tile;
 
 import java.util.List;

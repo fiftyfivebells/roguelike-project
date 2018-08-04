@@ -2,6 +2,7 @@ package roguelike.creature;
 
 import asciiPanel.AsciiPanel;
 import roguelike.creature.creatures.FungusAI;
+import roguelike.creature.creatures.PlayerAI;
 import roguelike.world.World;
 
 import java.util.List;
