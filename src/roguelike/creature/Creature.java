@@ -133,23 +133,24 @@ public class Creature {
 
     public void moveBy(int mx, int my, int mz) {
         Tile tile = world.tile(x+mx, y+my, z+mz);
-        Creature other = world.placeCreature(x + mx, y + my, z + mz);
 
         if (mz == -1) {
-            if (tile == Tile.STAIRS_UP) {
+            if (tile == Tile.STAIRS_DOWN) {
                 doAction("walk up stairs to level %d", z+mz+1);
-                return;
             } else {
                 doAction("try to go up but are stopped by the cave ceiling");
+                return;
             }
         } else if (mz == 1) {
-            if (tile == Tile.STAIRS_DOWN) {
-                doAction("walk down stairs to level %d", z+mz-1);
-                return;
+            if (tile == Tile.STAIRS_UP) {
+                doAction("walk down stairs to level %d", z+mz+1);
             } else {
-                doAction("try to go down by are stopped by the floor");
+                doAction("try to go down by are stopped by the cave floor");
+                return;
             }
         }
+
+        Creature other = world.placeCreature(x+mx, y+my, z+mz);
 
         if (other == null) {
             ai.onEnter(x+mx, y+my, z+mz, tile);

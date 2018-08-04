@@ -66,6 +66,10 @@ public class WorldBuilder {
             Point p = open.remove(0);
 
             for (Point neighbor : p.neighbors()) {
+                if (neighbor.getX() < 0 || neighbor.getY() < 0 || neighbor.getX() >= width || neighbor.getY() >= height) {
+                    continue;
+                }
+
                 if (regions[neighbor.getX()][neighbor.getY()][neighbor.getZ()] > 0 ||
                 tiles[neighbor.getX()][neighbor.getY()][neighbor.getZ()] == Tile.WALL) {
                     continue;
