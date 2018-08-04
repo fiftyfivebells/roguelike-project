@@ -65,15 +65,9 @@ public class PlayScreen implements Screen {
                 int wy = j + top;
 
                 if (player.canSee(wx, wy, player.getZ())) {
-
-                    Creature creature = world.placeCreature(wx, wy, player.getZ());
-                    if (creature != null) {
-                        terminal.write(creature.getGlyph(), creature.getX() - left, creature.getY() - top, creature.getColor());
-                    } else {
-                        terminal.write(world.glyph(wx, wy, player.getZ()), i, j, world.color(wx, wy, player.getZ()));
-                    }
+                    terminal.write(world.glyph(wx, wy, player.getZ()), i, j, world.color(wx, wy, player.getZ()));
                 } else {
-                    terminal.write(world.glyph(wx, wy, player.getZ()), i, j, Color.darkGray);
+                    terminal.write(fov.tile(wx, wy, player.getZ()).getGlyph(), i, j, Color.darkGray);
                 }
             }
         }
