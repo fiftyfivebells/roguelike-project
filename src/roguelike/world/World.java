@@ -8,7 +8,7 @@ import java.util.List;
 
 public class World {
     private Tile[][][] tiles;
-    private List<Creature> creatures = new ArrayList<Creature>();
+    private List<Creature> creatures;
     private int width;
     private int height;
     private int depth;
@@ -30,6 +30,7 @@ public class World {
         this.width = tiles.length;
         this.height = tiles[0].length;
         this.depth = tiles[0][0].length;
+        this.creatures = new ArrayList<Creature>();
     }
 
     public Tile tile(int x, int y, int z) {
