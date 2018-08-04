@@ -30,6 +30,7 @@ public class Creature {
         this.currentHP = hp;
         this.attackValue = atk;
         this.defenseValue = def;
+        this.visionRadius = 9;
     }
 
     public int getX() {
@@ -162,6 +163,14 @@ public class Creature {
         } else {
             attack(other);
         }
+    }
+
+    public Tile tile(int wx, int wy, int wz) {
+        return world.tile(wx, wy, wz);
+    }
+
+    public boolean canSee(int wx, int wy, int wz) {
+        return ai.canSee(wx, wy, wz);
     }
 
     public boolean canEnter(int x, int y, int z) {
