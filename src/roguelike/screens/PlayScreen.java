@@ -6,6 +6,7 @@ import roguelike.creature.CreatureFactory;
 import roguelike.world.World;
 import roguelike.world.WorldBuilder;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
@@ -58,11 +59,16 @@ public class PlayScreen implements Screen {
                 int wx = i + left;
                 int wy = j + top;
 
-                Creature creature = world.placeCreature(wx, wy, player.getZ());
-                if (creature != null) {
-                    terminal.write(creature.getGlyph(), creature.getX() - left, creature.getY() - top, creature.getColor());
+                if (player.canSee(wx, wy, player.getZ())) {
+
+                    Creature creature = world.placeCreature(wx, wy, player.getZ());
+                    if (creature != null) {
+                        terminal.write(creature.getGlyph(), creature.getX() - left, creature.getY() - top, creature.getColor());
+                    } else {
+                        terminal.write(world.glyph(wx, wy, player.getZ()), i, j, world.color(wx, wy, player.getZ()));
+                    }
                 } else {
-                    terminal.write(world.glyph(wx, wy, player.getZ()), i, j, world.color(wx, wy, player.getZ()));
+                    terminal.write(world.glyph(wx, wy, player.getZ()), x, y, Color.darkGray);
                 }
             }
         }
