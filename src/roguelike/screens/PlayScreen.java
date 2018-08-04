@@ -68,7 +68,7 @@ public class PlayScreen implements Screen {
                         terminal.write(world.glyph(wx, wy, player.getZ()), i, j, world.color(wx, wy, player.getZ()));
                     }
                 } else {
-                    terminal.write(world.glyph(wx, wy, player.getZ()), x, y, Color.darkGray);
+                    terminal.write(world.glyph(wx, wy, player.getZ()), i, j, Color.darkGray);
                 }
             }
         }
