@@ -3,6 +3,7 @@ package roguelike.screens;
 import asciiPanel.AsciiPanel;
 import roguelike.creature.Creature;
 import roguelike.creature.CreatureFactory;
+import roguelike.creature.FieldOfView;
 import roguelike.world.World;
 import roguelike.world.WorldBuilder;
 
@@ -19,13 +20,15 @@ public class PlayScreen implements Screen {
     private int screenWidth;
     private int screenHeight;
     private List<String> messages;
+    private FieldOfView fov;
 
     public PlayScreen() {
         screenWidth = 80;
         screenHeight = 21;
         messages = new ArrayList<String>();
         createWorld();
-        cf = new CreatureFactory(world);
+        fov = new FieldOfView(world);
+        cf = new CreatureFactory(world, fov);
         createCreatures(cf);
     }
 
@@ -54,6 +57,8 @@ public class PlayScreen implements Screen {
     }
 
     private void displayTiles(AsciiPanel terminal, int left, int top) {
+        fov.update(player.getX(), player.getY(), player.getZ(), player.getVisionRadius());
+
         for (int i = 0; i < screenWidth; i++) {
             for (int j = 0; j < screenHeight; j++) {
                 int wx = i + left;

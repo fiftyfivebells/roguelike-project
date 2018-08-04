@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Add method to update field of view each turn">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Override canSee method and create field of view variable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/creature/creatures/PlayerAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/creatures/PlayerAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,14 +29,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="9597" />
-          <entry key="txt" value="1624" />
+          <entry key="java" value="9743" />
+          <entry key="txt" value="1680" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9597" />
-          <entry key="PLAIN_TEXT" value="1624" />
+          <entry key="JAVA" value="9743" />
+          <entry key="PLAIN_TEXT" value="1680" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -83,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="70" column="75" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
+            <state relative-caret-position="320">
+              <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,7 +156,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/creatures/PlayerAI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
@@ -180,8 +181,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+            <state relative-caret-position="380">
+              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -213,7 +214,6 @@
         <option value="$PROJECT_DIR$/src/roguelike/ApplicationMain.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/Fungus.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/Point.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/PlayerAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java" />
@@ -221,10 +221,11 @@
         <option value="$PROJECT_DIR$/src/roguelike/world/Line.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/CreatureAI.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/Tile.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/FieldOfView.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/PlayerAI.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
       </list>
     </option>
   </component>
@@ -289,7 +290,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533418046402" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533418304377" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -355,13 +356,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Update constructor to set atk/def/health values">
-      <created>1533087538278</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1533087538279</updated>
     </task>
     <task id="LOCAL-00053" summary="Update constructors with new values">
       <created>1533087727843</created>
@@ -699,7 +693,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533417886561</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Override canSee method and create field of view variable">
+      <created>1533418066886</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1533418066886</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TodoView">
@@ -715,7 +716,7 @@
     <frame x="-1" y="31" width="1922" height="1049" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945235" visible="true" weight="0.2008547" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945235" visible="true" weight="0.2008547" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -724,7 +725,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50054765" side_tool="true" weight="0.1965812" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32968238" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32968238" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978093" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -775,7 +776,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add message to dig method" />
     <MESSAGE value="Create a Point class" />
     <MESSAGE value="Add method to get a point's neighboring points" />
     <MESSAGE value="Add up and down stairs to Tile enum" />
@@ -800,7 +800,8 @@
     <MESSAGE value="Add new terrain type (UNKNOWN)" />
     <MESSAGE value="Create a field of view class" />
     <MESSAGE value="Add method to update field of view each turn" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add method to update field of view each turn" />
+    <MESSAGE value="Override canSee method and create field of view variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Override canSee method and create field of view variable" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -869,16 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/world/Point.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -938,16 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="70" column="75" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/world/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -977,6 +958,26 @@
           <folding>
             <element signature="e#441#442#0" expanded="true" />
             <element signature="e#466#467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
