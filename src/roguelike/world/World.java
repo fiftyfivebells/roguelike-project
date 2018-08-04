@@ -78,11 +78,13 @@ public class World {
     }
 
     public char glyph(int x, int y, int z) {
-        return tile(x, y, z).getGlyph();
+        Creature creature = placeCreature(x, y, z);
+        return creature != null ? creature.getGlyph() : tile(x, y, z).getGlyph();
     }
 
     public Color color(int x, int y, int z) {
-        return tile(x, y, z).getColor();
+        Creature creature = placeCreature(x, y, z);
+        return creature != null ? creature.getColor() : tile(x, y, z).getColor();
     }
 
     public void dig(int x, int y, int z) {
