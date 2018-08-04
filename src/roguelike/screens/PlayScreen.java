@@ -66,13 +66,6 @@ public class PlayScreen implements Screen {
                 }
             }
         }
-
-        for (Creature c : world.getCreatures()) {
-            if ((c.getX() > left && c.getX() < left + screenWidth) &&
-                    (c.getY() > top && c.getY() < top + screenHeight)) {
-                terminal.write(c.getGlyph(), c.getX() - left, c.getY() - top, c.getColor());
-            }
-        }
     }
 
     private void displayMessages(AsciiPanel terminal, List<String> messages) {
