@@ -7,10 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class World {
-    private Tile[][] tiles;
+    private Tile[][][] tiles;
     private List<Creature> creatures = new ArrayList<Creature>();
     private int width;
     private int height;
+    private int depth;
 
     public int getWidth() {
         return width;
@@ -20,25 +21,28 @@ public class World {
         return height;
     }
 
+    public int getDepth() { return depth; }
+
     public List<Creature> getCreatures() { return creatures; }
 
-    public World(Tile[][] tiles) {
+    public World(Tile[][][] tiles) {
         this.tiles = tiles;
         this.width = tiles.length;
         this.height = tiles[0].length;
+        this.depth = tiles[0][0].length;
     }
 
-    public Tile tile(int x, int y) {
+    public Tile tile(int x, int y, int z) {
         if (x < 0 || x >= width || y < 0 || y >= height) {
             return Tile.BOUNDS;
         } else {
-            return tiles[x][y];
+            return tiles[x][y][z];
         }
     }
 
-    public Creature placeCreature(int x, int y) {
+    public Creature placeCreature(int x, int y, int z) {
         for (Creature c : creatures) {
-            if (c.getX() == x && c.getY() == y) {
+            if (c.getX() == x && c.getY() == y && c.getZ() == z) {
                 return c;
             }
         }
@@ -53,7 +57,7 @@ public class World {
             x = (int) (Math.random() * width);
             y = (int) (Math.random() * height);
         }
-        while (!tile(x, y), z.isGround() && placeCreature(x, y, z) != null);
+        while (!tile(x, y, z).isGround() && placeCreature(x, y, z) != null);
 
         creature.setX(x);
         creature.setY(y);
@@ -72,17 +76,17 @@ public class World {
         }
     }
 
-    public char glyph(int x, int y) {
-        return tile(x, y).getGlyph();
+    public char glyph(int x, int y, int z) {
+        return tile(x, y, z).getGlyph();
     }
 
-    public Color color(int x, int y) {
-        return tile(x, y).getColor();
+    public Color color(int x, int y, int z) {
+        return tile(x, y, z).getColor();
     }
 
-    public void dig(int x, int y) {
-        if (tile(x, y).isDiggable()) {
-            tiles[x][y] = Tile.FLOOR;
+    public void dig(int x, int y, int z) {
+        if (tile(x, y, z).isDiggable()) {
+            tiles[x][y][z] = Tile.FLOOR;
         }
     }
 }

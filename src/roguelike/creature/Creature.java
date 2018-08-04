@@ -1,5 +1,6 @@
 package roguelike.creature;
 
+import roguelike.world.Tile;
 import roguelike.world.World;
 
 import java.awt.Color;
@@ -10,6 +11,7 @@ public class Creature {
 
     private int x;
     private int y;
+    private int z;
 
     private char glyph;
     private Color color;
@@ -37,9 +39,13 @@ public class Creature {
         return y;
     }
 
+    public int getZ() { return z; }
+
     public void setX(int x) { this.x = x; }
 
     public void setY(int y) { this.y = y; }
+
+    public void setZ(int z) { this.z = z; }
 
     public int getCurrentHP() { return currentHP; }
 
@@ -69,9 +75,9 @@ public class Creature {
         this.ai = ai;
     }
 
-    public void dig(int wx, int wy) {
+    public void dig(int wx, int wy, int wz) {
 
-        world.dig(wx, wy);
+        world.dig(wx, wy, wz);
         doAction("dig");
     }
 
@@ -91,7 +97,7 @@ public class Creature {
             for (int oy = -r; oy < r + 1; oy++) {
                 if (ox * ox + oy * oy > r * r) { continue; }
 
-                Creature other = world.placeCreature(x + ox, y + oy);
+                Creature other = world.placeCreature(x + ox, y + oy, z);
 
                 if (other == null) { continue; }
 
@@ -125,19 +131,36 @@ public class Creature {
         }
     }
 
-    public void moveBy(int mx, int my) {
-        Creature other = world.placeCreature(x + mx, y + my);
+    public void moveBy(int mx, int my, int mz) {
+        Tile tile = world.tile(x+mx, y+my, z+mz);
+        Creature other = world.placeCreature(x + mx, y + my, z + mz);
+
+        if (mz == -1) {
+            if (tile == Tile.STAIRS_UP) {
+                doAction("walk up stairs to level %d", z+mz+1);
+                return;
+            } else {
+                doAction("try to go up but are stopped by the cave ceiling");
+            }
+        } else if (mz == 1) {
+            if (tile == Tile.STAIRS_DOWN) {
+                doAction("walk down stairs to level %d", z+mz-1);
+                return;
+            } else {
+                doAction("try to go down by are stopped by the floor");
+            }
+        }
 
         if (other == null) {
-            ai.onEnter(x+mx, y+my, world.tile(x+mx, y+my));
+            ai.onEnter(x+mx, y+my, z+mz, tile);
         } else {
             attack(other);
         }
     }
 
-    public boolean canEnter(int x, int y) {
+    public boolean canEnter(int x, int y, int z) {
 
-        return world.tile(x, y).isGround() && world.placeCreature(x, y) == null;
+        return world.tile(x, y, z).isGround() && world.placeCreature(x, y, z) == null;
     }
 
     public void update() {

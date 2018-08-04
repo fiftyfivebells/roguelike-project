@@ -31,13 +31,15 @@ public class PlayScreen implements Screen {
     private void createCreatures(CreatureFactory creatureFactory) {
         player = creatureFactory.newPlayer(messages);
 
-        for (int i = 0; i < 8; i++) {
-            creatureFactory.newFungus();
+        for (int z = 0; z < world.getDepth(); z++) {
+            for (int i = 0; i < 8; i++) {
+                creatureFactory.newFungus(z);
+            }
         }
     }
 
     public void createWorld() {
-        world = new WorldBuilder(90, 31)
+        world = new WorldBuilder(90, 31, 5)
             .makeCaves()
             .build();
     }

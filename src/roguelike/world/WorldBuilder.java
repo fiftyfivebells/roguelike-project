@@ -11,6 +11,7 @@ public class WorldBuilder {
     private int depth;
     private Tile[][][] tiles;
     private int[][][] regions;
+    private int nextRegion;
 
     public WorldBuilder(int width, int height, int depth) {
         this.height = height;
@@ -18,6 +19,7 @@ public class WorldBuilder {
         this.depth = depth;
         this.tiles = new Tile[width][height][depth];
         this.regions = new int[width][height][depth];
+        this.nextRegion = 1;
     }
 
     public World build() {
@@ -73,6 +75,7 @@ public class WorldBuilder {
                 open.add(neighbor);
             }
         }
+        return size;
     }
 
     public WorldBuilder connectRegions() {
@@ -134,34 +137,38 @@ public class WorldBuilder {
     private WorldBuilder randomizeTiles() {
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
-                tiles[i][j] = Math.random() < 0.5 ? Tile.FLOOR : Tile.WALL;
+                for (int z = 0; z < depth; z++) {
+                    tiles[i][j][z] = Math.random() < 0.5 ? Tile.FLOOR : Tile.WALL;
+                }
             }
         }
         return this;
     }
 
     private WorldBuilder smoothTiles(int repeat) {
-        Tile[][] tiles2 = new Tile[width][height];
+        Tile[][][] tiles2 = new Tile[width][height][depth];
 
         for (int round = 0; round < repeat; round++) {
             for (int i = 0; i < width; i++) {
                 for (int j = 0; j < height; j++) {
-                    int floors = 0;
-                    int rocks = 0;
+                    for (int z = 0; z < depth; z++) {
+                        int floors = 0;
+                        int rocks = 0;
 
-                    for (int ox = -1; ox < 2; ox++) {
-                        for (int oy = -1; oy < 2; oy++) {
-                            if (i + ox < 0 || i + ox >= width || j + oy < 0 || j + oy >= height) {
-                                continue;
-                            }
-                            if (tiles[i + ox][j + oy] == Tile.FLOOR) {
-                                floors++;
-                            } else {
-                                rocks++;
+                        for (int ox = -1; ox < 2; ox++) {
+                            for (int oy = -1; oy < 2; oy++) {
+                                if (i + ox < 0 || i + ox >= width || j + oy < 0 || j + oy >= height) {
+                                    continue;
+                                }
+                                if (tiles[i + ox][j + oy][z] == Tile.FLOOR) {
+                                    floors++;
+                                } else {
+                                    rocks++;
+                                }
                             }
                         }
+                        tiles2[i][j][z] = floors >= rocks ? Tile.FLOOR : Tile.WALL;
                     }
-                    tiles2[i][j]= floors >= rocks ? Tile.FLOOR : Tile.WALL;
                 }
             }
             tiles = tiles2;
