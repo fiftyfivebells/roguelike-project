@@ -8,7 +8,8 @@ public enum Tile {
     WALL('#', AsciiPanel.white),
     BOUNDS('x', AsciiPanel.brightBlack),
     STAIRS_DOWN('>', AsciiPanel.brightGreen),
-    STAIRS_UP('<', AsciiPanel.brightGreen);
+    STAIRS_UP('<', AsciiPanel.brightGreen),
+    UNKNOWN(' ', AsciiPanel.white);
 
     private char glyph;
     public char getGlyph() { return glyph; }
