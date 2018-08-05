@@ -70,7 +70,7 @@ public class PlayScreen implements Screen {
     }
 
     public int getScrollY() {
-        return Math.max(0, Math.min(player.getY() - screenHeight / 2, world.getHeight() - screenWidth));
+        return Math.max(0, Math.min(player.getY() - screenHeight / 2, world.getHeight() - screenHeight));
     }
 
     private void displayTiles(AsciiPanel terminal, int left, int top) {

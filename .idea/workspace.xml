@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Remove unnecessary key event checks">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Add D to key event checks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,14 +29,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="17" />
-          <entry key="java" value="16483" />
-          <entry key="txt" value="3934" />
+          <entry key="java" value="16490" />
+          <entry key="txt" value="3991" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16483" />
-          <entry key="PLAIN_TEXT" value="3951" />
+          <entry key="JAVA" value="16490" />
+          <entry key="PLAIN_TEXT" value="4008" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -130,8 +129,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="166" column="78" selection-start-line="166" selection-start-column="78" selection-end-line="166" selection-end-column="78" />
+            <state relative-caret-position="300">
+              <caret line="72" column="102" selection-start-line="72" selection-start-column="102" selection-end-line="72" selection-end-column="102" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -321,7 +320,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533512837610" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533513210498" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -387,20 +386,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00102" summary="Add fov functionality to creaturefactory and playscreen">
-      <created>1533418403688</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1533418403688</updated>
-    </task>
-    <task id="LOCAL-00103" summary="Update glyph/color methods to add creature or tile">
-      <created>1533418593699</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1533418593699</updated>
     </task>
     <task id="LOCAL-00104" summary="Remove now unnecessary code from displayTiles">
       <created>1533418765773</created>
@@ -731,7 +716,21 @@
       <option name="project" value="LOCAL" />
       <updated>1533512169115</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="Change spawn rate of fungi">
+      <created>1533512861234</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1533512861234</updated>
+    </task>
+    <task id="LOCAL-00152" summary="Add D to key event checks">
+      <created>1533512886744</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1533512886744</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TodoView">
@@ -807,8 +806,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add missing return statements" />
-    <MESSAGE value="Add createItems method to playscreen" />
     <MESSAGE value="Change cf to sf and call createItems in screen setup" />
     <MESSAGE value="Replace depth with z in method (fix infinite loop)" />
     <MESSAGE value="Add new Inventory class" />
@@ -832,7 +829,9 @@
     <MESSAGE value="Create exit stairs on world generation" />
     <MESSAGE value="Add methods to check victory and show proper screen" />
     <MESSAGE value="Remove unnecessary key event checks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary key event checks" />
+    <MESSAGE value="Change spawn rate of fungi" />
+    <MESSAGE value="Add D to key event checks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add D to key event checks" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1076,8 +1075,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="166" column="78" selection-start-line="166" selection-start-column="78" selection-end-line="166" selection-end-column="78" />
+        <state relative-caret-position="300">
+          <caret line="72" column="102" selection-start-line="72" selection-start-column="102" selection-end-line="72" selection-end-column="102" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
