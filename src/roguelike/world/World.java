@@ -86,6 +86,42 @@ public class World {
         items[x][y][z] = item;
     }
 
+    public void addAtEmptySpace(Item item, int x, int y, int z) {
+        if (item == null) { return; }
+
+        List<Point> points = new ArrayList<Point>();
+        List<Point> checked = new ArrayList<Point>();
+
+        points.add(new Point(x, y, z));
+
+        while(!points.isEmpty()) {
+            Point p = points.remove(0);
+            checked.add(p);
+
+            if (!tile(p.getX(), p.getY(), p.getZ()).isGround()) {
+                continue;
+            }
+
+            if (items[p.getX()][p.getY()][p.getZ()] == null) {
+                items[p.getX()][p.getY()][p.getZ()] = item;
+                Creature c = this.placeCreature(p.getX(), p.getY(), p.getZ());
+
+                if (c != null) {
+                    c.notify("A %s lands at your feet", item.getName());
+                }
+                return;
+            } else {
+                List<Point> neighbors = p.neighbors();
+                neighbors.removeAll(checked);
+                points.addAll(neighbors);
+            }
+        }
+    }
+
+    public void remove(int x, int y, int z) {
+        items[x][y][z] = null;
+    }
+
     public void remove(Creature c) {
         creatures.remove(c);
     }
