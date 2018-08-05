@@ -46,6 +46,14 @@ public class PlayScreen implements Screen {
         }
     }
 
+    private void createItems(StuffFactory stuffFactory) {
+        for (int z = 0; z < world.getDepth(); z++) {
+            for (int i = 0; i < world.getDepth() * world.getHeight() / 20; i++) {
+                stuffFactory.newRock(z);
+            }
+        }
+    }
+
     public void createWorld() {
         world = new WorldBuilder(90, 31, 5)
             .makeCaves()
