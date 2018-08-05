@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Add item list and method to get item from the list">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Overload addAtEmptyLocation method to work for items">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/roguelike/world/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/world/World.java" afterDir="false" />
     </list>
@@ -29,14 +29,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="17" />
-          <entry key="java" value="11845" />
-          <entry key="txt" value="2620" />
+          <entry key="java" value="12054" />
+          <entry key="txt" value="2673" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11845" />
-          <entry key="PLAIN_TEXT" value="2637" />
+          <entry key="JAVA" value="12054" />
+          <entry key="PLAIN_TEXT" value="2690" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -73,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/world/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="85" column="34" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
+            <state relative-caret-position="420">
+              <caret line="118" column="44" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1156#1157#0" expanded="true" />
@@ -290,7 +290,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533503865635" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533504090710" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -356,13 +356,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Add message to dig method">
-      <created>1533257224831</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1533257224831</updated>
     </task>
     <task id="LOCAL-00074" summary="Create a Point class">
       <created>1533257933657</created>
@@ -700,7 +693,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533500523348</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Overload addAtEmptyLocation method to work for items">
+      <created>1533503887976</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1533503887977</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TodoView">
@@ -776,7 +776,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Move playerAI into creatures package" />
     <MESSAGE value="Add new terrain type (UNKNOWN)" />
     <MESSAGE value="Create a field of view class" />
     <MESSAGE value="Add method to update field of view each turn" />
@@ -801,7 +800,8 @@
     <MESSAGE value="Rename creatureFactory" />
     <MESSAGE value="Add rocks method to stuffFactory" />
     <MESSAGE value="Add item list and method to get item from the list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add item list and method to get item from the list" />
+    <MESSAGE value="Overload addAtEmptyLocation method to work for items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Overload addAtEmptyLocation method to work for items" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1008,8 +1008,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/world/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="85" column="34" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
+        <state relative-caret-position="420">
+          <caret line="118" column="44" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1156#1157#0" expanded="true" />
