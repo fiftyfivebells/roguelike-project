@@ -1,5 +1,6 @@
 package roguelike.creature;
 
+import roguelike.items.Inventory;
 import roguelike.world.Tile;
 import roguelike.world.World;
 
@@ -22,6 +23,7 @@ public class Creature {
     private int attackValue;
     private int defenseValue;
     private int visionRadius;
+    private Inventory inventory;
 
     public Creature(World world, char glyph, String name, Color color, int hp, int atk, int def) {
         this.world = world;
@@ -33,6 +35,7 @@ public class Creature {
         this.defenseValue = def;
         this.visionRadius = 9;
         this.name = name;
+        this.inventory = new Inventory(20);
     }
 
     public int getX() {
@@ -70,6 +73,8 @@ public class Creature {
     public int getDefenseValue() { return defenseValue; }
 
     public void setDefenseValue(int defenseValue) { this.defenseValue = defenseValue; }
+
+    public Inventory getInventory() { return inventory; }
 
     public String getName() { return name; }
 
