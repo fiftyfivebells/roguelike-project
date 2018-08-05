@@ -4,6 +4,7 @@ import asciiPanel.AsciiPanel;
 import roguelike.creature.creatures.BatAI;
 import roguelike.creature.creatures.FungusAI;
 import roguelike.creature.creatures.PlayerAI;
+import roguelike.items.Item;
 import roguelike.world.World;
 
 import java.lang.reflect.Field;
@@ -37,5 +38,11 @@ public class StuffFactory {
         world.addAtEmptyLocation(bat, depth);
         new BatAI(bat);
         return bat;
+    }
+
+    public Item newRock(int depth) {
+        Item rock = new Item(',', AsciiPanel.yellow, "rock");
+        world.addAtEmptyLocation(rock, depth);
+        return rock;
     }
 }
