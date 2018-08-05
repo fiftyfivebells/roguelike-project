@@ -2,14 +2,14 @@ package roguelike.creature.creatures;
 
 import roguelike.creature.Creature;
 import roguelike.creature.CreatureAI;
-import roguelike.creature.CreatureFactory;
+import roguelike.creature.StuffFactory;
 
 public class FungusAI extends CreatureAI {
 
-    private CreatureFactory factory;
+    private StuffFactory factory;
     private int spreadCount;
 
-    public FungusAI(Creature creature, CreatureFactory cf) {
+    public FungusAI(Creature creature, StuffFactory cf) {
         super(creature);
         this.factory = cf;
     }

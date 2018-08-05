@@ -2,7 +2,7 @@ package roguelike.screens;
 
 import asciiPanel.AsciiPanel;
 import roguelike.creature.Creature;
-import roguelike.creature.CreatureFactory;
+import roguelike.creature.StuffFactory;
 import roguelike.creature.FieldOfView;
 import roguelike.world.World;
 import roguelike.world.WorldBuilder;
@@ -16,7 +16,7 @@ public class PlayScreen implements Screen {
 
     private World world;
     Creature player;
-    CreatureFactory cf;
+    StuffFactory cf;
     private int screenWidth;
     private int screenHeight;
     private List<String> messages;
@@ -28,20 +28,20 @@ public class PlayScreen implements Screen {
         messages = new ArrayList<String>();
         createWorld();
         fov = new FieldOfView(world);
-        cf = new CreatureFactory(world, fov);
+        cf = new StuffFactory(world, fov);
         createCreatures(cf);
     }
 
-    private void createCreatures(CreatureFactory creatureFactory) {
-        player = creatureFactory.newPlayer(messages);
+    private void createCreatures(StuffFactory stuffFactory) {
+        player = stuffFactory.newPlayer(messages);
 
         for (int z = 0; z < world.getDepth(); z++) {
             for (int i = 0; i < 8; i++) {
-                creatureFactory.newFungus(z);
+                stuffFactory.newFungus(z);
             }
 
             for (int j = 0; j < 20; j++) {
-                creatureFactory.newBat(z);
+                stuffFactory.newBat(z);
             }
         }
     }

@@ -9,11 +9,11 @@ import roguelike.world.World;
 import java.lang.reflect.Field;
 import java.util.List;
 
-public class CreatureFactory {
+public class StuffFactory {
     private World world;
     private FieldOfView fov;
 
-    public CreatureFactory(World world, FieldOfView fov) {
+    public StuffFactory(World world, FieldOfView fov) {
         this.world = world;
         this.fov = fov;
     }
