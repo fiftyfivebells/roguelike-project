@@ -104,7 +104,7 @@ public class World {
         }
 
         if (item(x, y, z) != null) {
-            return item(x, y, z).getColor();
+            return item(x, y, z).getGlyph();
         }
 
     }
