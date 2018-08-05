@@ -1,5 +1,7 @@
 package roguelike.world;
 
+import org.omg.CORBA.MARSHAL;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -24,6 +26,20 @@ public class WorldBuilder {
 
     public World build() {
         return new World(tiles);
+    }
+
+    private WorldBuilder addExitStairs() {
+        int x = -1;
+        int y = -1;
+
+        do {
+            x = (int) (Math.random() * width);
+            y = (int) (Math.random() * height);
+        }
+        while(tiles[x][y][0] != Tile.FLOOR);
+
+        tiles[x][y][0] = Tile.STAIRS_UP;
+        return this;
     }
 
     public WorldBuilder createRegions() {

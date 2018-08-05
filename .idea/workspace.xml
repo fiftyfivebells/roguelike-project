@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Make a victory item in the stuff factory">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Create new victory item at world generation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,25 +29,25 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="17" />
-          <entry key="java" value="15818" />
-          <entry key="txt" value="3649" />
+          <entry key="java" value="16046" />
+          <entry key="txt" value="3692" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="15818" />
-          <entry key="PLAIN_TEXT" value="3666" />
+          <entry key="JAVA" value="16046" />
+          <entry key="PLAIN_TEXT" value="3709" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="18" />
+          <entry key="java" value="19" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="18" />
+          <entry key="JAVA" value="19" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -126,11 +126,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
               <caret line="56" column="58" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -220,7 +232,6 @@
         <option value="$PROJECT_DIR$/src/roguelike/world/Point.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/PlayerAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/Line.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/Tile.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/PlayerAI.java" />
@@ -236,6 +247,7 @@
         <option value="$PROJECT_DIR$/src/roguelike/screens/InventoryBasedScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java" />
       </list>
     </option>
   </component>
@@ -300,7 +312,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533511478749" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533511676148" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -366,13 +378,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00097" summary="Move playerAI into creatures package">
-      <created>1533417087963</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1533417087963</updated>
     </task>
     <task id="LOCAL-00098" summary="Add new terrain type (UNKNOWN)">
       <created>1533417104548</created>
@@ -710,7 +715,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533511445938</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="Create new victory item at world generation">
+      <created>1533511491420</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1533511491420</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TodoView">
@@ -786,7 +798,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rename creatureFactory" />
     <MESSAGE value="Add rocks method to stuffFactory" />
     <MESSAGE value="Add item list and method to get item from the list" />
     <MESSAGE value="Overload addAtEmptyLocation method to work for items" />
@@ -811,7 +822,8 @@
     <MESSAGE value="Fix typos" />
     <MESSAGE value="Change methods in playscreen to use inventory screens" />
     <MESSAGE value="Make a victory item in the stuff factory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make a victory item in the stuff factory" />
+    <MESSAGE value="Create new victory item at world generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create new victory item at world generation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -840,16 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1340">
-          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1057,6 +1059,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="56" column="58" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
