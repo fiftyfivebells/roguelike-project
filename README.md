@@ -8,3 +8,4 @@ My intent here is to get some familiarity with the general concepts and structur
 * different types of maps (caves, dungeon rooms, forest, etc)
 * possibly use more interfaces to provide behavior to creatures
 * probably abandon the regions thing with the maps (it seems unnecessarily complicated)
+* some constructors do a lot of work, so maybe try to break those out into different methods instead
