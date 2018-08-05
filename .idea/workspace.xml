@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Add methods to check victory and show proper screen">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Remove unnecessary key event checks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,25 +30,25 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="17" />
-          <entry key="java" value="16391" />
-          <entry key="txt" value="3897" />
+          <entry key="java" value="16483" />
+          <entry key="txt" value="3934" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16391" />
-          <entry key="PLAIN_TEXT" value="3914" />
+          <entry key="JAVA" value="16483" />
+          <entry key="PLAIN_TEXT" value="3951" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="19" />
+          <entry key="java" value="20" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="19" />
+          <entry key="JAVA" value="20" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -129,11 +130,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="139" column="11" selection-start-line="139" selection-start-column="11" selection-end-line="139" selection-end-column="11" />
+            <state relative-caret-position="320">
+              <caret line="166" column="78" selection-start-line="166" selection-start-column="78" selection-end-line="166" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -186,15 +196,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/roguelike/creature/creatures/PlayerAI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
@@ -231,7 +232,6 @@
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/Fungus.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/Point.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/PlayerAI.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/Line.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/Tile.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/PlayerAI.java" />
@@ -247,6 +247,7 @@
         <option value="$PROJECT_DIR$/src/roguelike/screens/InventoryBasedScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
       </list>
     </option>
@@ -293,6 +294,14 @@
               <item name="roguelike" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="roguelike" type="462c0819:PsiDirectoryNode" />
+              <item name="creature" type="462c0819:PsiDirectoryNode" />
+              <item name="creatures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roguelike" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roguelike" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="roguelike" type="462c0819:PsiDirectoryNode" />
               <item name="items" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -312,7 +321,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533512154930" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533512836586" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -378,13 +387,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00101" summary="Override canSee method and create field of view variable">
-      <created>1533418066886</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1533418066886</updated>
     </task>
     <task id="LOCAL-00102" summary="Add fov functionality to creaturefactory and playscreen">
       <created>1533418403688</created>
@@ -722,7 +724,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533512137912</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <task id="LOCAL-00150" summary="Remove unnecessary key event checks">
+      <created>1533512169115</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1533512169115</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="TodoView">
@@ -738,7 +747,7 @@
     <frame x="-1" y="31" width="1922" height="1049" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945235" visible="true" weight="0.20512821" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945235" visible="true" weight="0.20512821" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -747,7 +756,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50054765" side_tool="true" weight="0.1965812" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32968238" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32968238" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978093" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -798,7 +807,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update color and glyph to check for items" />
     <MESSAGE value="Add missing return statements" />
     <MESSAGE value="Add createItems method to playscreen" />
     <MESSAGE value="Change cf to sf and call createItems in screen setup" />
@@ -823,7 +831,8 @@
     <MESSAGE value="Make method to add up stairs on first level" />
     <MESSAGE value="Create exit stairs on world generation" />
     <MESSAGE value="Add methods to check victory and show proper screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add methods to check victory and show proper screen" />
+    <MESSAGE value="Remove unnecessary key event checks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary key event checks" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -855,13 +864,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -1065,10 +1067,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="139" column="11" selection-start-line="139" selection-start-column="11" selection-end-line="139" selection-end-column="11" />
+        <state relative-caret-position="320">
+          <caret line="166" column="78" selection-start-line="166" selection-start-column="78" selection-end-line="166" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
