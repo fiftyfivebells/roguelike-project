@@ -81,9 +81,9 @@ public class World {
             x = (int) (Math.random() * width);
             y = (int) (Math.random() * height);
         }
-        while (!tile(x, y, depth).isGround() || item(x, y, depth) != null);
+        while (!tile(x, y, z).isGround() || item(x, y, z) != null);
 
-        items[x][y][depth] = item;
+        items[x][y][z] = item;
     }
 
     public void remove(Creature c) {
