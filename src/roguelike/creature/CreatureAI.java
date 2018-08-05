@@ -30,7 +30,15 @@ public class CreatureAI {
         return true;
     }
 
-    public void onEnter(int x, int y, int z, Tile tile) {}
+    public void onEnter(int x, int y, int z, Tile tile) {
+        if (tile.isGround()) {
+            creature.setX(x);
+            creature.setY(y);
+            creature.setZ(z);
+        } else {
+            creature.doAction("bump into a wall");
+        }
+    }
 
     public void onUpdate() {}
 
