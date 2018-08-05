@@ -114,7 +114,7 @@ public class Creature {
                 if (other == this) {
                     other.notify("You " + message + ".", params);
                 } else if (other.canSee(x, y, z)) {
-                    other.notify(String.format("The %s %s.", getGlyph(), makeSecondPerson(message)), params);
+                    other.notify(String.format("The %s %s.", getName(), makeSecondPerson(message)), params);
                 }
             }
         }
