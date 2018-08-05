@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Make a batAI class (extends creatureAI)">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Add bat method to creatureFactory">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,14 +28,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10578" />
-          <entry key="txt" value="2056" />
+          <entry key="java" value="10684" />
+          <entry key="txt" value="2089" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10578" />
-          <entry key="PLAIN_TEXT" value="2056" />
+          <entry key="JAVA" value="10684" />
+          <entry key="PLAIN_TEXT" value="2089" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -95,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-500">
-              <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+            <state relative-caret-position="320">
+              <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,7 +178,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="520">
@@ -221,12 +221,12 @@
         <option value="$PROJECT_DIR$/src/roguelike/world/Tile.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/PlayerAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/World.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/FieldOfView.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/CreatureAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/BatAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
       </list>
     </option>
   </component>
@@ -291,7 +291,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533494709733" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533494818951" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -357,13 +357,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Update playerAI with message list and notify method">
-      <created>1533173987034</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1533173987034</updated>
     </task>
     <task id="LOCAL-00062" summary="Update creature factory player method with message list">
       <created>1533174104925</created>
@@ -701,7 +694,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533494588301</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Add bat method to creatureFactory">
+      <created>1533494739306</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1533494739306</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TodoView">
@@ -777,7 +777,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix conditional statement logic" />
     <MESSAGE value="Update moveBy method to handle up and down stairs" />
     <MESSAGE value="Fix conditional in tile method" />
     <MESSAGE value="Move list creation into constructor" />
@@ -802,7 +801,8 @@
     <MESSAGE value="Add functionality to creature's onEnter" />
     <MESSAGE value="Add wander method to creatureAI" />
     <MESSAGE value="Make a batAI class (extends creatureAI)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make a batAI class (extends creatureAI)" />
+    <MESSAGE value="Add bat method to creatureFactory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add bat method to creatureFactory" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -941,16 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-500">
-          <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/creature/FieldOfView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -989,6 +979,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

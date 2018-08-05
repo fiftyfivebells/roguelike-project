@@ -39,6 +39,10 @@ public class PlayScreen implements Screen {
             for (int i = 0; i < 8; i++) {
                 creatureFactory.newFungus(z);
             }
+
+            for (int j = 0; j < 20; j++) {
+                creatureFactory.newBat(z);
+            }
         }
     }
 
