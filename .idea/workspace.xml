@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Create pickup and drop methods for creatures">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Make new method to add dropped item at empty space">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/world/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/world/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,14 +29,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="17" />
-          <entry key="java" value="13885" />
-          <entry key="txt" value="3135" />
+          <entry key="java" value="13934" />
+          <entry key="txt" value="3187" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="13885" />
-          <entry key="PLAIN_TEXT" value="3152" />
+          <entry key="JAVA" value="13934" />
+          <entry key="PLAIN_TEXT" value="3204" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -58,10 +58,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/world/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="700">
               <caret line="115" column="41" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -107,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="51" column="70" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+            <state relative-caret-position="406">
+              <caret line="131" column="45" selection-start-line="131" selection-start-column="45" selection-end-line="131" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -235,10 +235,10 @@
         <option value="$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java" />
         <option value="$PROJECT_DIR$/src/roguelike/items/Item.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/items/Inventory.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/World.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
       </list>
     </option>
   </component>
@@ -296,7 +296,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533507319724" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533507521493" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -362,13 +362,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00085" summary="Fix conditional in tile method">
-      <created>1533352510511</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1533352510511</updated>
     </task>
     <task id="LOCAL-00086" summary="Move list creation into constructor">
       <created>1533384695443</created>
@@ -706,7 +699,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533506769630</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="Make new method to add dropped item at empty space">
+      <created>1533507336708</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1533507336708</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TodoView">
@@ -782,7 +782,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add wander method to creatureAI" />
     <MESSAGE value="Make a batAI class (extends creatureAI)" />
     <MESSAGE value="Add bat method to creatureFactory" />
     <MESSAGE value="Create bats in playscreen createCreature method" />
@@ -807,7 +806,8 @@
     <MESSAGE value="Make methods to add, remove, and check if full" />
     <MESSAGE value="Add an inventory and new getter to the creature class" />
     <MESSAGE value="Create pickup and drop methods for creatures" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create pickup and drop methods for creatures" />
+    <MESSAGE value="Make new method to add dropped item at empty space" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make new method to add dropped item at empty space" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -979,16 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="51" column="70" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/items/Inventory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -1016,7 +1006,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/world/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="700">
           <caret line="115" column="41" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1028,6 +1018,16 @@
             <element signature="e#2361#2362#0" expanded="true" />
             <element signature="e#2399#2400#0" expanded="true" />
             <element signature="e#2434#2435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="131" column="45" selection-start-line="131" selection-start-column="45" selection-end-line="131" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
