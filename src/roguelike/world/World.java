@@ -73,6 +73,19 @@ public class World {
         creatures.add(creature);
     }
 
+    public void addAtEmptyLocation(Item item, int z) {
+        int x;
+        int y;
+
+        do {
+            x = (int) (Math.random() * width);
+            y = (int) (Math.random() * height);
+        }
+        while (!tile(x, y, depth).isGround() || item(x, y, depth) != null);
+
+        items[x][y][depth] = item;
+    }
+
     public void remove(Creature c) {
         creatures.remove(c);
     }
