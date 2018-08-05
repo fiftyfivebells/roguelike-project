@@ -54,6 +54,7 @@ public class PlayScreen implements Screen {
                 stuffFactory.newRock(z);
             }
         }
+        stuffFactory.newVictoryItem(world.getDepth() - 1);
     }
 
     public void createWorld() {
