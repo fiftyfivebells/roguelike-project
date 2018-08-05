@@ -71,7 +71,7 @@ public class Creature {
 
     public void setDefenseValue(int defenseValue) { this.defenseValue = defenseValue; }
 
-    public void getName() { return name; }
+    public String getName() { return name; }
 
     public char getGlyph() {
         return glyph;
