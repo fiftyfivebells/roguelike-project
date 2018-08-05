@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Make new abstract inventory screen">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Make method to display output of inventory screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,14 +28,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="17" />
-          <entry key="java" value="14693" />
-          <entry key="txt" value="3302" />
+          <entry key="java" value="15034" />
+          <entry key="txt" value="3352" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14693" />
-          <entry key="PLAIN_TEXT" value="3319" />
+          <entry key="JAVA" value="15034" />
+          <entry key="PLAIN_TEXT" value="3369" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -98,9 +98,10 @@
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/InventoryBasedScreen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="520">
-              <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+              <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1152#1160#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -303,7 +304,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533509795972" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533509998272" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -369,13 +370,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00089" summary="Add vision radius variable and methods to creatures">
-      <created>1533415233639</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1533415233639</updated>
     </task>
     <task id="LOCAL-00090" summary="Add canSee and tile methods to creatures">
       <created>1533415381741</created>
@@ -713,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533509503610</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="Make method to display output of inventory screen">
+      <created>1533509808000</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1533509808000</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TodoView">
@@ -789,7 +790,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Check if player is dead and return lose screen if true" />
     <MESSAGE value="Add check to method so creatures can stand in one place" />
     <MESSAGE value="Add method to check world for another creature" />
     <MESSAGE value="Update creature wander so they don't hurt each other" />
@@ -814,7 +814,8 @@
     <MESSAGE value="Add key event for picking up an item" />
     <MESSAGE value="Add check for null item in isfull method" />
     <MESSAGE value="Make new abstract inventory screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make new abstract inventory screen" />
+    <MESSAGE value="Make method to display output of inventory screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make method to display output of inventory screen" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1042,9 +1043,10 @@
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/InventoryBasedScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
-          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1152#1160#0" expanded="true" />
           </folding>
         </state>
       </provider>
