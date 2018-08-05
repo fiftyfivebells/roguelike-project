@@ -200,6 +200,7 @@ public class WorldBuilder {
         return randomizeTiles()
                 .smoothTiles(8)
                 .createRegions()
-                .connectRegions();
+                .connectRegions()
+                .addExitStairs();
     }
 }
