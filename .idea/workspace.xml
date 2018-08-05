@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Add check to method so creatures can stand in one place">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Add method to check world for another creature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/creature/CreatureAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/CreatureAI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,14 +28,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10857" />
-          <entry key="txt" value="2264" />
+          <entry key="java" value="10994" />
+          <entry key="txt" value="2311" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10857" />
-          <entry key="PLAIN_TEXT" value="2264" />
+          <entry key="JAVA" value="10994" />
+          <entry key="PLAIN_TEXT" value="2311" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -107,7 +107,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -141,11 +141,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/CreatureAI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+            <state relative-caret-position="440">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -223,12 +223,12 @@
         <option value="$PROJECT_DIR$/src/roguelike/world/Tile.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/PlayerAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/FieldOfView.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/creature/CreatureAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/BatAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/World.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/creature/CreatureAI.java" />
       </list>
     </option>
   </component>
@@ -293,7 +293,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533495180563" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533495431650" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -359,13 +359,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Fix typo in instance variable">
-      <created>1533174959684</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1533174959684</updated>
     </task>
     <task id="LOCAL-00066" summary="Add notify calls to attack method">
       <created>1533174997233</created>
@@ -703,7 +696,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533495119533</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Add method to check world for another creature">
+      <created>1533495199613</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1533495199613</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TodoView">
@@ -779,7 +779,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix conflicts" />
     <MESSAGE value="Create new Line class" />
     <MESSAGE value="Add vision radius variable and methods to creatures" />
     <MESSAGE value="Add canSee and tile methods to creatures" />
@@ -804,7 +803,8 @@
     <MESSAGE value="Create bats in playscreen createCreature method" />
     <MESSAGE value="Check if player is dead and return lose screen if true" />
     <MESSAGE value="Add check to method so creatures can stand in one place" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add check to method so creatures can stand in one place" />
+    <MESSAGE value="Add method to check world for another creature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add method to check world for another creature" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -931,16 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/CreatureAI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/creature/creatures/BatAI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -995,6 +985,16 @@
             <element signature="e#4474#4475#0" expanded="true" />
             <element signature="e#4527#4528#0" expanded="true" />
             <element signature="e#4571#4572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/CreatureAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
