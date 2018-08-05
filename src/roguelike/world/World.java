@@ -1,6 +1,7 @@
 package roguelike.world;
 
 import roguelike.creature.Creature;
+import roguelike.items.Item;
 
 import java.awt.Color;
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.List;
 public class World {
     private Tile[][][] tiles;
     private List<Creature> creatures;
+    private Item[][][] items;
     private int width;
     private int height;
     private int depth;
@@ -31,6 +33,7 @@ public class World {
         this.height = tiles[0].length;
         this.depth = tiles[0][0].length;
         this.creatures = new ArrayList<Creature>();
+        this.items = new Item[width][height][depth];
     }
 
     public Tile tile(int x, int y, int z) {
@@ -39,6 +42,10 @@ public class World {
         } else {
             return tiles[x][y][z];
         }
+    }
+
+    public Item item(int width, int height, int depth) {
+        return items[width][height][depth];
     }
 
     public Creature placeCreature(int x, int y, int z) {
