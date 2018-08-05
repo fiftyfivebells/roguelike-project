@@ -21,6 +21,7 @@ public class PlayScreen implements Screen {
     private int screenHeight;
     private List<String> messages;
     private FieldOfView fov;
+    private Screen subscreen;
 
     public PlayScreen() {
         screenWidth = 80;
@@ -106,38 +107,74 @@ public class PlayScreen implements Screen {
 
         String stats = String.format(" %3d/%3d hp", player.getCurrentHP(), player.getMaxHP());
         terminal.write(stats, 1, 23);
+
+        if (subscreen != null) {
+            subscreen.displayOutput(terminal);
+        }
     }
 
     @Override
     public Screen respondToUserInput(KeyEvent key) {
-        switch(key.getKeyCode()) {
-            case KeyEvent.VK_ESCAPE: return new LoseScreen();
-            case KeyEvent.VK_ENTER: return new WinScreen();
-            case KeyEvent.VK_H:
-            case KeyEvent.VK_LEFT:  player.moveBy(-1, 0, 0);  break;
-            case KeyEvent.VK_L:
-            case KeyEvent.VK_RIGHT: player.moveBy(1, 0, 0);   break;
-            case KeyEvent.VK_K:
-            case KeyEvent.VK_UP:    player.moveBy(0, -1, 0);   break;
-            case KeyEvent.VK_J:
-            case KeyEvent.VK_DOWN:  player.moveBy(0, 1, 0);  break;
-            case KeyEvent.VK_Y:     player.moveBy(-1, -1, 0);  break;
-            case KeyEvent.VK_U:     player.moveBy(1, -1, 0);   break;
-            case KeyEvent.VK_B:     player.moveBy(-1, 1, 0); break;
-            case KeyEvent.VK_N:     player.moveBy(1, 1, 0);  break;
-        }
+        if (subscreen != null) {
+            subscreen = subscreen.respondToUserInput(key);
+        } else {
 
-        switch(key.getKeyChar()) {
-            case 'g':
-            case ',': player.pickup(); break;
-            case '<': player.moveBy(0, 0, -1); break;
-            case '>': player.moveBy(0, 0, 1); break;
+            switch (key.getKeyCode()) {
+                case KeyEvent.VK_ESCAPE:
+                    return new LoseScreen();
+                case KeyEvent.VK_ENTER:
+                    return new WinScreen();
+                case KeyEvent.VK_H:
+                case KeyEvent.VK_LEFT:
+                    player.moveBy(-1, 0, 0);
+                    break;
+                case KeyEvent.VK_L:
+                case KeyEvent.VK_RIGHT:
+                    player.moveBy(1, 0, 0);
+                    break;
+                case KeyEvent.VK_K:
+                case KeyEvent.VK_UP:
+                    player.moveBy(0, -1, 0);
+                    break;
+                case KeyEvent.VK_J:
+                case KeyEvent.VK_DOWN:
+                    player.moveBy(0, 1, 0);
+                    break;
+                case KeyEvent.VK_Y:
+                    player.moveBy(-1, -1, 0);
+                    break;
+                case KeyEvent.VK_U:
+                    player.moveBy(1, -1, 0);
+                    break;
+                case KeyEvent.VK_B:
+                    player.moveBy(-1, 1, 0);
+                    break;
+                case KeyEvent.VK_N:
+                    player.moveBy(1, 1, 0);
+                    break;
+            }
+
+            switch (key.getKeyChar()) {
+                case 'g':
+                case ',':
+                    player.pickup();
+                    break;
+                case '<':
+                    player.moveBy(0, 0, -1);
+                    break;
+                case '>':
+                    player.moveBy(0, 0, 1);
+                    break;
+            }
         }
-        world.update();
+        if (subscreen == null) {
+            world.update();
+        }
 
         if (player.getCurrentHP() < 1) {
             return new LoseScreen();
         }
+
         return this;
     }
 }
