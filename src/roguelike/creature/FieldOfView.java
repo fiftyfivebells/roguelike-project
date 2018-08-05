@@ -36,7 +36,7 @@ public class FieldOfView {
                     continue;
                 }
 
-                if (wx+x < 0 || wx+x > world.getWidth() || wy + y < 0 || wy +y >= world.getHeight()) {
+                if (wx+x < 0 || wx+x >= world.getWidth() || wy + y < 0 || wy +y >= world.getHeight()) {
                     continue;
                 }
 
