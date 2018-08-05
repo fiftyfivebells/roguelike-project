@@ -106,11 +106,10 @@ public class PlayScreen implements Screen {
     private Screen userExits() {
         for (Item item : player.getInventory().getItems()) {
             if (item != null && item.getName().equals("teddy bear")) {
-                return new WinScreen;
-            } else {
-                return new LoseScreen();
+                return new WinScreen();
             }
         }
+        return new LoseScreen();
     }
 
     @Override
@@ -165,6 +164,7 @@ public class PlayScreen implements Screen {
                 case KeyEvent.VK_N:
                     player.moveBy(1, 1, 0);
                     break;
+                case KeyEvent.VK_D: subscreen = new DropScreen(player); break;
             }
 
             switch (key.getKeyChar()) {
