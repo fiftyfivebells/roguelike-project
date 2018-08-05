@@ -167,6 +167,10 @@ public class Creature {
         }
     }
 
+    public Creature creature(int wx, int wy, int wz) {
+        return world.placeCreature(wx, wy, wz);
+    }
+
     public Tile tile(int wx, int wy, int wz) {
         return world.tile(wx, wy, wz);
     }
