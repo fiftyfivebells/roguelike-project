@@ -16,7 +16,7 @@ public class PlayScreen implements Screen {
 
     private World world;
     Creature player;
-    StuffFactory cf;
+    StuffFactory sf;
     private int screenWidth;
     private int screenHeight;
     private List<String> messages;
@@ -28,8 +28,9 @@ public class PlayScreen implements Screen {
         messages = new ArrayList<String>();
         createWorld();
         fov = new FieldOfView(world);
-        cf = new StuffFactory(world, fov);
-        createCreatures(cf);
+        sf = new StuffFactory(world, fov);
+        createCreatures(sf);
+        createItems(sf);
     }
 
     private void createCreatures(StuffFactory stuffFactory) {
