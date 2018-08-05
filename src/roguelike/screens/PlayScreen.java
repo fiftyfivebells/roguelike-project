@@ -4,6 +4,8 @@ import asciiPanel.AsciiPanel;
 import roguelike.creature.Creature;
 import roguelike.creature.StuffFactory;
 import roguelike.creature.FieldOfView;
+import roguelike.items.Item;
+import roguelike.world.Tile;
 import roguelike.world.World;
 import roguelike.world.WorldBuilder;
 
@@ -97,6 +99,20 @@ public class PlayScreen implements Screen {
         messages.clear();
     }
 
+    private boolean userIsTryingToExit() {
+        return player.getZ() == 0 && world.tile(player.getX(), player.getY(), player.getZ()) == Tile.STAIRS_UP;
+    }
+
+    private Screen userExits() {
+        for (Item item : player.getInventory().getItems()) {
+            if (item != null && item.getName().equals("teddy bear")) {
+                return new WinScreen;
+            } else {
+                return new LoseScreen();
+            }
+        }
+    }
+
     @Override
     public void displayOutput(AsciiPanel terminal) {
         int left = getScrollX();
@@ -161,7 +177,11 @@ public class PlayScreen implements Screen {
                     player.pickup();
                     break;
                 case '<':
-                    player.moveBy(0, 0, -1);
+                    if (userIsTryingToExit()) {
+                        return userExits();
+                    } else {
+                        player.moveBy(0, 0, -1);
+                    }
                     break;
                 case '>':
                     player.moveBy(0, 0, 1);
