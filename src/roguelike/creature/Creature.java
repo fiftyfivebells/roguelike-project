@@ -16,13 +16,14 @@ public class Creature {
     private char glyph;
     private Color color;
 
+    private String name;
     private int currentHP;
     private int maxHP;
     private int attackValue;
     private int defenseValue;
     private int visionRadius;
 
-    public Creature(World world, char glyph, Color color, int hp, int atk, int def) {
+    public Creature(World world, char glyph, String name, Color color, int hp, int atk, int def) {
         this.world = world;
         this.glyph = glyph;
         this.color = color;
@@ -31,6 +32,7 @@ public class Creature {
         this.attackValue = atk;
         this.defenseValue = def;
         this.visionRadius = 9;
+        this.name = name;
     }
 
     public int getX() {
@@ -69,6 +71,8 @@ public class Creature {
 
     public void setDefenseValue(int defenseValue) { this.defenseValue = defenseValue; }
 
+    public void getName() { return name; }
+
     public char getGlyph() {
         return glyph;
     }
@@ -94,7 +98,7 @@ public class Creature {
 
         other.modifyHP(-amount);
 
-        doAction("attack the %s for %d damage", other.getGlyph(), amount);
+        doAction("attack the %s for %d damage", other.getName(), amount);
     }
 
     public void doAction(String message, Object ... params) {

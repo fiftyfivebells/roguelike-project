@@ -19,21 +19,21 @@ public class CreatureFactory {
     }
 
     public Creature newPlayer(List<String> messages) {
-        Creature player = new Creature(world, '@', AsciiPanel.brightWhite, 100, 20, 5);
+        Creature player = new Creature(world, '@', "player", AsciiPanel.brightWhite, 100, 20, 5);
         world.addAtEmptyLocation(player, 0);
         new PlayerAI(player, messages, fov);
         return player;
     }
 
     public Creature newFungus(int depth) {
-        Creature fungus = new Creature(world, 'm', AsciiPanel.brightGreen, 10, 0, 0);
+        Creature fungus = new Creature(world, 'm', "fungus", AsciiPanel.brightGreen, 10, 0, 0);
         world.addAtEmptyLocation(fungus, depth);
         new FungusAI(fungus, this);
         return fungus;
     }
 
     public Creature newBat(int depth) {
-        Creature bat = new Creature(world, 'b', AsciiPanel.yellow, 15, 5, 0);
+        Creature bat = new Creature(world, 'b', "bat", AsciiPanel.yellow, 15, 5, 0);
         world.addAtEmptyLocation(bat, depth);
         new BatAI(bat);
         return bat;
