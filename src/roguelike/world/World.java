@@ -106,7 +106,7 @@ public class World {
         if (item(x, y, z) != null) {
             return item(x, y, z).getGlyph();
         }
-
+        return tile(x, y, z).getGlyph();
     }
 
     public Color color(int x, int y, int z) {
@@ -118,6 +118,7 @@ public class World {
         if (item(x, y, z) != null) {
             return item(x, y, z).getColor();
         }
+        return tile(x, y, z).getColor();
     }
 
     public void dig(int x, int y, int z) {
