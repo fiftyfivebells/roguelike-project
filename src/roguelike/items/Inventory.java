@@ -15,4 +15,32 @@ public class Inventory {
     public Item get(int i) {
         return items[i];
     }
+
+    public void add(Item item) {
+        for (int i = 0; i < items.length; i++) {
+            if (items[i] == null) {
+                items[i] = item;
+                break;
+            }
+        }
+    }
+
+    public void remove(Item item) {
+        for (int i = 0; i < items.length; i++) {
+            if (items[i] == item) {
+                items[i] = null;
+                break;
+            }
+        }
+    }
+
+    public boolean isFull() {
+        int size = 0;
+
+        for (int i = 0; i < items.length; i++) {
+            size++;
+        }
+
+        return size == items.length;
+    }
 }
