@@ -122,7 +122,11 @@ public class PlayScreen implements Screen {
             case '<': player.moveBy(0, 0, -1); break;
             case '>': player.moveBy(0, 0, 1); break;
         }
-        world.update();;
+        world.update();
+
+        if (player.getCurrentHP() < 1) {
+            return new LoseScreen();
+        }
         return this;
     }
 }
