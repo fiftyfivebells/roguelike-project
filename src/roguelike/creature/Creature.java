@@ -1,6 +1,7 @@
 package roguelike.creature;
 
 import roguelike.items.Inventory;
+import roguelike.items.Item;
 import roguelike.world.Tile;
 import roguelike.world.World;
 
@@ -88,6 +89,24 @@ public class Creature {
 
     public void setAi(CreatureAI ai) {
         this.ai = ai;
+    }
+
+    public void pickup() {
+        Item item = world.item(x, y, z);
+
+        if (inventory.isFull() || item == null) {
+            doAction("grab at the ground");
+        } else {
+            doAction("pick up a %s", item.getName());
+            world.remove(x, y, z);
+            inventory.add(item);
+        }
+    }
+
+    public void drop(Item item) {
+        doAction("drop a " + item.getName());
+        inventory.remove(item);
+        world.addAtEmptySpace(item, x, y, z);
     }
 
     public void dig(int wx, int wy, int wz) {
