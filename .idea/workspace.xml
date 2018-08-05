@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Create method to add lines to inventory action screen">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Add method to respond to input at inventory screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,14 +28,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="17" />
-          <entry key="java" value="15391" />
-          <entry key="txt" value="3408" />
+          <entry key="java" value="15392" />
+          <entry key="txt" value="3466" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="15391" />
-          <entry key="PLAIN_TEXT" value="3425" />
+          <entry key="JAVA" value="15392" />
+          <entry key="PLAIN_TEXT" value="3483" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -97,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/InventoryBasedScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
+            <state relative-caret-position="400">
+              <caret line="72" column="24" lean-forward="true" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1152#1160#0" expanded="true" />
@@ -304,7 +304,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533510362465" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533510428381" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -370,13 +370,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00091" summary="Create canSee method in creatureAI">
-      <created>1533415731144</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1533415731144</updated>
     </task>
     <task id="LOCAL-00092" summary="Change displayTiles to only show tiles player can see">
       <created>1533415914658</created>
@@ -714,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533510013056</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="Add method to respond to input at inventory screen">
+      <created>1533510378408</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1533510378408</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TodoView">
@@ -790,7 +790,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add method to check world for another creature" />
     <MESSAGE value="Update creature wander so they don't hurt each other" />
     <MESSAGE value="Add name to creature, update constructors to use name" />
     <MESSAGE value="Fix typo in return type" />
@@ -815,7 +814,8 @@
     <MESSAGE value="Make new abstract inventory screen" />
     <MESSAGE value="Make method to display output of inventory screen" />
     <MESSAGE value="Create method to add lines to inventory action screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create method to add lines to inventory action screen" />
+    <MESSAGE value="Add method to respond to input at inventory screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add method to respond to input at inventory screen" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1042,8 +1042,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/InventoryBasedScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
+        <state relative-caret-position="400">
+          <caret line="72" column="24" lean-forward="true" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1152#1160#0" expanded="true" />
