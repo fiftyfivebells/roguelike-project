@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Initialize maxFood and currentFood in constructor">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Create an EatScreen and implement all methods from parent">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,14 +30,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="18" />
-          <entry key="java" value="17330" />
-          <entry key="txt" value="4280" />
+          <entry key="java" value="17379" />
+          <entry key="txt" value="4341" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17330" />
-          <entry key="PLAIN_TEXT" value="4298" />
+          <entry key="JAVA" value="17379" />
+          <entry key="PLAIN_TEXT" value="4359" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -99,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
+            <state relative-caret-position="261">
+              <caret line="167" column="77" selection-start-line="167" selection-start-column="77" selection-end-line="167" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -152,7 +153,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/EatScreen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
@@ -253,10 +254,10 @@
         <option value="$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/items/Item.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/EatScreen.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
       </list>
     </option>
   </component>
@@ -329,7 +330,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533856569382" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533856657225" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -395,13 +396,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00110" summary="Add bat method to creatureFactory">
-      <created>1533494739306</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1533494739306</updated>
     </task>
     <task id="LOCAL-00111" summary="Create bats in playscreen createCreature method">
       <created>1533494841861</created>
@@ -739,7 +733,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533856427847</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="Create an EatScreen and implement all methods from parent">
+      <created>1533856585479</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1533856585479</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TodoView">
@@ -815,7 +816,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create pickup and drop methods for creatures" />
     <MESSAGE value="Make new method to add dropped item at empty space" />
     <MESSAGE value="Add key event for picking up an item" />
     <MESSAGE value="Add check for null item in isfull method" />
@@ -840,7 +840,8 @@
     <MESSAGE value="Add food values and getters/setters for those values" />
     <MESSAGE value="Give creatures an eat method" />
     <MESSAGE value="Initialize maxFood and currentFood in constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialize maxFood and currentFood in constructor" />
+    <MESSAGE value="Create an EatScreen and implement all methods from parent" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create an EatScreen and implement all methods from parent" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1038,16 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/items/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="821">
@@ -1103,6 +1094,16 @@
             <element signature="e#289#290#0" expanded="true" />
             <element signature="e#355#356#0" expanded="true" />
             <element signature="e#402#403#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="167" column="77" selection-start-line="167" selection-start-column="77" selection-end-line="167" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

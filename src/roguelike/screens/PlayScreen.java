@@ -165,6 +165,7 @@ public class PlayScreen implements Screen {
                     player.moveBy(1, 1, 0);
                     break;
                 case KeyEvent.VK_D: subscreen = new DropScreen(player); break;
+                case KeyEvent.VK_E: subscreen = new EatScreen(player); break;
             }
 
             switch (key.getKeyChar()) {
