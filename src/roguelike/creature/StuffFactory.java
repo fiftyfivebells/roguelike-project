@@ -94,4 +94,21 @@ public class StuffFactory {
         world.addAtEmptyLocation(item, depth);
         return item;
     }
+
+    public Item randomWeapon (int depth) {
+        switch ((int) (Math.random() * 3)) {
+            case 0: return newDagger(depth);
+            case 1: return newSword(depth);
+            default: return newStaff(depth);
+        }
+    }
+
+    public Item randomArmor (int depth) {
+        switch ((int) (Math.random() * 3)) {
+            case 0: return newLightArmor(depth);
+            case 1: return newMediumArmor(depth);
+            default: return newHeavyArmor(depth);
+        }
+    }
+
 }
