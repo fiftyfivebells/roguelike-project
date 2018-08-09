@@ -21,6 +21,8 @@ public class Creature {
     private String name;
     private int currentHP;
     private int maxHP;
+    private int maxFood;
+    private int currentFood;
     private int attackValue;
     private int defenseValue;
     private int visionRadius;
@@ -66,6 +68,10 @@ public class Creature {
     public int getMaxHP() { return maxHP; }
 
     public void setMaxHP(int maxHP) { this.maxHP = maxHP; }
+
+    public int getMaxFood() { return maxFood; }
+
+    public int getCurrentFood() { return currentFood; }
 
     public int getAttackValue() { return attackValue; }
 
@@ -165,6 +171,19 @@ public class Creature {
             leaveCorpse();
             world.remove(this);
         }
+    }
+
+    public void modifyFood(int amount) {
+        currentFood += amount;
+        if (currentFood > maxFood) {
+            currentFood = maxFood;
+        } else if (currentFood < 1 && isPlayer()) {
+            modifyHP(-1000);
+        }
+    }
+
+    public boolean isPlayer() {
+        return glyph == '@';
     }
 
     private void leaveCorpse() {

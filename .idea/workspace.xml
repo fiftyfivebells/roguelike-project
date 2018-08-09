@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Fix typo">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Update creatures to leave a corpse with a food value">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,14 +30,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="17" />
-          <entry key="java" value="16603" />
-          <entry key="txt" value="3999" />
+          <entry key="java" value="17089" />
+          <entry key="txt" value="4106" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16603" />
-          <entry key="PLAIN_TEXT" value="4016" />
+          <entry key="JAVA" value="17089" />
+          <entry key="PLAIN_TEXT" value="4123" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -147,19 +147,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
-              <caret line="96" column="25" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
+            <state relative-caret-position="820">
+              <caret line="185" column="28" selection-start-line="185" selection-start-column="28" selection-end-line="185" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4742#4743#0" expanded="true" />
+                <element signature="e#4775#4776#0" expanded="true" />
+                <element signature="e#5855#5856#0" expanded="true" />
+                <element signature="e#5909#5910#0" expanded="true" />
+                <element signature="e#5957#5958#0" expanded="true" />
+                <element signature="e#6002#6003#0" expanded="true" />
+                <element signature="e#6055#6056#0" expanded="true" />
+                <element signature="e#6099#6100#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/items/Item.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="821">
@@ -207,6 +215,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>modifyhp</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -230,7 +243,6 @@
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/BatAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/CreatureAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/CreatureFactory.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/World.java" />
         <option value="$PROJECT_DIR$/src/roguelike/items/Inventory.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/DropScreen.java" />
@@ -240,6 +252,7 @@
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/items/Item.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
       </list>
     </option>
   </component>
@@ -312,7 +325,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533513210498" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533856226072" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -378,20 +391,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00105" summary="Only notify if the creature can see the event">
-      <created>1533418832832</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1533418832832</updated>
-    </task>
-    <task id="LOCAL-00106" summary="Fix typo in conditional">
-      <created>1533494218874</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1533494218874</updated>
     </task>
     <task id="LOCAL-00107" summary="Add functionality to creature's onEnter">
       <created>1533494344302</created>
@@ -722,7 +721,21 @@
       <option name="project" value="LOCAL" />
       <updated>1533513221348</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="Add food value getter and modifier to Item class">
+      <created>1533854055619</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1533854055620</updated>
+    </task>
+    <task id="LOCAL-00155" summary="Update creatures to leave a corpse with a food value">
+      <created>1533855885582</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1533855885582</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TodoView">
@@ -798,8 +811,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change cf to sf and call createItems in screen setup" />
-    <MESSAGE value="Replace depth with z in method (fix infinite loop)" />
     <MESSAGE value="Add new Inventory class" />
     <MESSAGE value="Make methods to add, remove, and check if full" />
     <MESSAGE value="Add an inventory and new getter to the creature class" />
@@ -823,7 +834,9 @@
     <MESSAGE value="Change spawn rate of fungi" />
     <MESSAGE value="Add D to key event checks" />
     <MESSAGE value="Fix typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix typo" />
+    <MESSAGE value="Add food value getter and modifier to Item class" />
+    <MESSAGE value="Update creatures to leave a corpse with a food value" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update creatures to leave a corpse with a food value" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1011,16 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="96" column="25" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="860">
@@ -1062,6 +1065,24 @@
             <element signature="e#771#772#0" expanded="true" />
             <element signature="e#817#818#0" expanded="true" />
             <element signature="e#851#852#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="185" column="28" selection-start-line="185" selection-start-column="28" selection-end-line="185" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4742#4743#0" expanded="true" />
+            <element signature="e#4775#4776#0" expanded="true" />
+            <element signature="e#5855#5856#0" expanded="true" />
+            <element signature="e#5909#5910#0" expanded="true" />
+            <element signature="e#5957#5958#0" expanded="true" />
+            <element signature="e#6002#6003#0" expanded="true" />
+            <element signature="e#6055#6056#0" expanded="true" />
+            <element signature="e#6099#6100#0" expanded="true" />
           </folding>
         </state>
       </provider>
