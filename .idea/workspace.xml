@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Add food values and getters/setters for those values">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Give creatures an eat method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" afterDir="false" />
     </list>
@@ -30,14 +30,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="17" />
-          <entry key="java" value="17147" />
-          <entry key="txt" value="4201" />
+          <entry key="java" value="17186" />
+          <entry key="txt" value="4229" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17147" />
-          <entry key="PLAIN_TEXT" value="4218" />
+          <entry key="JAVA" value="17186" />
+          <entry key="PLAIN_TEXT" value="4246" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -150,8 +150,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="190" column="31" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
+            <state relative-caret-position="460">
+              <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4742#4743#0" expanded="true" />
@@ -325,7 +325,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533856328184" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533856407486" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -391,13 +391,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00108" summary="Add wander method to creatureAI">
-      <created>1533494472805</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1533494472805</updated>
     </task>
     <task id="LOCAL-00109" summary="Make a batAI class (extends creatureAI)">
       <created>1533494588301</created>
@@ -735,7 +728,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533856273367</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="Give creatures an eat method">
+      <created>1533856344722</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1533856344722</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TodoView">
@@ -811,7 +811,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Make methods to add, remove, and check if full" />
     <MESSAGE value="Add an inventory and new getter to the creature class" />
     <MESSAGE value="Create pickup and drop methods for creatures" />
     <MESSAGE value="Make new method to add dropped item at empty space" />
@@ -836,7 +835,8 @@
     <MESSAGE value="Add food value getter and modifier to Item class" />
     <MESSAGE value="Update creatures to leave a corpse with a food value" />
     <MESSAGE value="Add food values and getters/setters for those values" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add food values and getters/setters for those values" />
+    <MESSAGE value="Give creatures an eat method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Give creatures an eat method" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1071,8 +1071,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="190" column="31" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
+        <state relative-caret-position="460">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4742#4743#0" expanded="true" />

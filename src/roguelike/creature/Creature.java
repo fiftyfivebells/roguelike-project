@@ -34,6 +34,8 @@ public class Creature {
         this.color = color;
         this.maxHP = hp;
         this.currentHP = hp;
+        this.maxFood = 1000;
+        this.currentFood = maxFood / 3 * 2;
         this.attackValue = atk;
         this.defenseValue = def;
         this.visionRadius = 9;
