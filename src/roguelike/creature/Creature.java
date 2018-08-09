@@ -186,6 +186,11 @@ public class Creature {
         return glyph == '@';
     }
 
+    public void eat(Item item) {
+        modifyFood(item.getFoodValue());
+        inventory.remove(item);
+    }
+
     private void leaveCorpse() {
         Item corpse = new Item('%', color, name + " corpse");
         corpse.modifyFoodValue(3 * maxHP);
