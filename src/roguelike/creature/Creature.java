@@ -118,7 +118,7 @@ public class Creature {
     }
 
     public void dig(int wx, int wy, int wz) {
-
+        modifyFood(-10);
         world.dig(wx, wy, wz);
         doAction("dig");
     }
@@ -131,6 +131,7 @@ public class Creature {
         other.modifyHP(-amount);
 
         doAction("attack the %s for %d damage", other.getName(), amount);
+        modifyFood(-10);
     }
 
     public void doAction(String message, Object ... params) {
@@ -247,7 +248,7 @@ public class Creature {
     }
 
     public void update() {
-
+        modifyFood(-1);
         ai.onUpdate();
     }
 
