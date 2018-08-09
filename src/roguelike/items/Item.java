@@ -6,6 +6,7 @@ public class Item {
     private char glyph;
     private Color color;
     private String name;
+    private int foodValue;
 
     public Item(char glyph, Color color, String name) {
         this.glyph = glyph;
@@ -35,5 +36,13 @@ public class Item {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getFoodValue() {
+        return foodValue;
+    }
+
+    public void modifyFoodValye(int amount) {
+        foodValue += amount;
     }
 }
