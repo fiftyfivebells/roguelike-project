@@ -53,21 +53,21 @@ public class StuffFactory {
     }
 
     public Item newDagger(int depth) {
-        Item item = new item('|', AsciiPanel.white, "dagger");
+        Item item = new Item('|', AsciiPanel.white, "dagger");
         item.modifyAttackValue(5);
         world.addAtEmptyLocation(item, depth);
         return item;
     }
 
     public Item newSword(int depth) {
-        Item item = new item('|', AsciiPanel.brightCyan, "sword");
+        Item item = new Item('|', AsciiPanel.brightCyan, "sword");
         item.modifyAttackValue(10);
         world.addAtEmptyLocation(item, depth);
         return item;
     }
 
     public Item newStaff(int depth) {
-        Item item = new item('/', AsciiPanel.white, "staff");
+        Item item = new Item('/', AsciiPanel.white, "staff");
         item.modifyAttackValue(5);
         item.modifyDefenseValue(3);
         world.addAtEmptyLocation(item, depth);
@@ -75,21 +75,21 @@ public class StuffFactory {
     }
 
     public Item newLightArmor(int depth) {
-        Item item = new item('[', AsciiPanel.green, "tunic");
+        Item item = new Item('[', AsciiPanel.green, "tunic");
         item.modifyDefenseValue(2);
         world.addAtEmptyLocation(item, depth);
         return item;
     }
 
     public Item newMediumArmor(int depth) {
-        Item item = new item('[', AsciiPanel.white, "chainmail");
+        Item item = new Item('[', AsciiPanel.white, "chainmail");
         item.modifyDefenseValue(4);
         world.addAtEmptyLocation(item, depth);
         return item;
     }
 
     public Item newHeavyArmor(int depth) {
-        Item item = new item('[', AsciiPanel.brightWhite, "plate mail");
+        Item item = new Item('[', AsciiPanel.brightWhite, "plate mail");
         item.modifyDefenseValue(6);
         world.addAtEmptyLocation(item, depth);
         return item;
