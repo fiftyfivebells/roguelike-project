@@ -55,7 +55,7 @@ public class PlayScreen implements Screen {
             for (int i = 0; i < (world.getWidth() * world.getHeight()) / 8; i++) {
                 stuffFactory.newRock(z);
                 stuffFactory.randomArmor(z);
-                stuffFactory.randomWeapon(z)
+                stuffFactory.randomWeapon(z);
             }
         }
         stuffFactory.newVictoryItem(world.getDepth() - 1);
