@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Make helper method to display hunger status">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Add modifyFood to actions to increase hunger each turn">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" afterDir="false" />
     </list>
@@ -30,14 +30,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="18" />
-          <entry key="java" value="17736" />
-          <entry key="txt" value="4414" />
+          <entry key="java" value="17768" />
+          <entry key="txt" value="4476" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17736" />
-          <entry key="PLAIN_TEXT" value="4432" />
+          <entry key="JAVA" value="17768" />
+          <entry key="PLAIN_TEXT" value="4494" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -136,8 +136,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="133" column="23" selection-start-line="133" selection-start-column="23" selection-end-line="133" selection-end-column="23" />
+            <state relative-caret-position="467">
+              <caret line="176" column="30" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4742#4743#0" expanded="true" />
@@ -222,6 +222,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>modifyhp</find>
+      <find>mo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -330,7 +331,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533857081035" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533857143192" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -396,13 +397,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00113" summary="Add check to method so creatures can stand in one place">
-      <created>1533495119533</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1533495119533</updated>
     </task>
     <task id="LOCAL-00114" summary="Add method to check world for another creature">
       <created>1533495199613</created>
@@ -740,7 +734,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533856926422</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="Add modifyFood to actions to increase hunger each turn">
+      <created>1533857104966</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1533857104966</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TodoView">
@@ -816,7 +817,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add check for null item in isfull method" />
     <MESSAGE value="Make new abstract inventory screen" />
     <MESSAGE value="Make method to display output of inventory screen" />
     <MESSAGE value="Create method to add lines to inventory action screen" />
@@ -841,7 +841,8 @@
     <MESSAGE value="Create an EatScreen and implement all methods from parent" />
     <MESSAGE value="Add key event for the 'e' key" />
     <MESSAGE value="Make helper method to display hunger status" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make helper method to display hunger status" />
+    <MESSAGE value="Add modifyFood to actions to increase hunger each turn" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add modifyFood to actions to increase hunger each turn" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1092,8 +1093,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="133" column="23" selection-start-line="133" selection-start-column="23" selection-end-line="133" selection-end-column="23" />
+        <state relative-caret-position="467">
+          <caret line="176" column="30" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4742#4743#0" expanded="true" />

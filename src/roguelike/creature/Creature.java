@@ -173,6 +173,8 @@ public class Creature {
             doAction("die");
             leaveCorpse();
             world.remove(this);
+        } else if (currentHP > maxHP) {
+            currentHP = maxHP;
         }
     }
 
