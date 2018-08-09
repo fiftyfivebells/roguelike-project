@@ -112,6 +112,20 @@ public class PlayScreen implements Screen {
         return new LoseScreen();
     }
 
+    private String hunger() {
+        if (player.getCurrentFood() < player.getMaxFood() * 0.1) {
+            return "Starving";
+        } else if (player.getCurrentFood() < player.getMaxFood() * 0.2) {
+            return "Hungry";
+        } else if (player.getCurrentFood() < player.getMaxFood() * 0.9) {
+            return "Stuffed";
+        } else if (player.getCurrentFood() < player.getMaxFood() * 0.8) {
+            return "Full";
+        } else {
+            return "";
+        }
+    }
+
     @Override
     public void displayOutput(AsciiPanel terminal) {
         int left = getScrollX();
@@ -121,7 +135,7 @@ public class PlayScreen implements Screen {
 
         terminal.writeCenter(" -- press [escape] to lose or [enter] to win.", 23);
 
-        String stats = String.format(" %3d/%3d hp", player.getCurrentHP(), player.getMaxHP());
+        String stats = String.format(" %3d/%3d hp %8s", player.getCurrentHP(), player.getMaxHP(), hunger());
         terminal.write(stats, 1, 23);
 
         if (subscreen != null) {
