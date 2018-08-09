@@ -161,8 +161,16 @@ public class Creature {
         currentHP += amount;
 
         if (currentHP < 1) {
+            doAction("die");
+            leaveCorpse();
             world.remove(this);
         }
+    }
+
+    private void leaveCorpse() {
+        Item corpse = new Item('%', color, name + " corpse");
+        corpse.modifyFoodValue(3 * maxHP);
+        world.addAtEmptySpace(corpse, x, y, z);
     }
 
     public void moveBy(int mx, int my, int mz) {

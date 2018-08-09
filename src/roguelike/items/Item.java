@@ -42,7 +42,7 @@ public class Item {
         return foodValue;
     }
 
-    public void modifyFoodValye(int amount) {
+    public void modifyFoodValue(int amount) {
         foodValue += amount;
     }
 }
