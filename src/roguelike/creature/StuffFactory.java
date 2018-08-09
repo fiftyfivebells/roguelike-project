@@ -51,4 +51,47 @@ public class StuffFactory {
         world.addAtEmptyLocation(item, depth);
         return item;
     }
+
+    public Item newDagger(int depth) {
+        Item item = new item('|', AsciiPanel.white, "dagger");
+        item.modifyAttackValue(5);
+        world.addAtEmptyLocation(item, depth);
+        return item;
+    }
+
+    public Item newSword(int depth) {
+        Item item = new item('|', AsciiPanel.brightCyan, "sword");
+        item.modifyAttackValue(10);
+        world.addAtEmptyLocation(item, depth);
+        return item;
+    }
+
+    public Item newStaff(int depth) {
+        Item item = new item('/', AsciiPanel.white, "staff");
+        item.modifyAttackValue(5);
+        item.modifyDefenseValue(3);
+        world.addAtEmptyLocation(item, depth);
+        return item;
+    }
+
+    public Item newLightArmor(int depth) {
+        Item item = new item('[', AsciiPanel.green, "tunic");
+        item.modifyDefenseValue(2);
+        world.addAtEmptyLocation(item, depth);
+        return item;
+    }
+
+    public Item newMediumArmor(int depth) {
+        Item item = new item('[', AsciiPanel.white, "chainmail");
+        item.modifyDefenseValue(4);
+        world.addAtEmptyLocation(item, depth);
+        return item;
+    }
+
+    public Item newHeavyArmor(int depth) {
+        Item item = new item('[', AsciiPanel.brightWhite, "plate mail");
+        item.modifyDefenseValue(6);
+        world.addAtEmptyLocation(item, depth);
+        return item;
+    }
 }

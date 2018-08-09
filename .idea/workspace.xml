@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Fix modifyHP so currentHP can't exceed maxHP">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Put atk/def values and getters/setters in Item class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,14 +30,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="18" />
-          <entry key="java" value="17975" />
-          <entry key="txt" value="4571" />
+          <entry key="java" value="18268" />
+          <entry key="txt" value="4625" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17975" />
-          <entry key="PLAIN_TEXT" value="4589" />
+          <entry key="JAVA" value="18268" />
+          <entry key="PLAIN_TEXT" value="4643" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -171,10 +171,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/items/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="821">
+            <state relative-caret-position="1280">
               <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
               <folding>
                 <element signature="e#313#314#0" expanded="true" />
@@ -206,11 +206,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="860">
-              <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+            <state relative-caret-position="781">
+              <caret line="94" column="20" lean-forward="true" selection-start-line="94" selection-start-column="20" selection-end-line="94" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -260,13 +260,13 @@
         <option value="$PROJECT_DIR$/src/roguelike/items/Inventory.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/DropScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/InventoryBasedScreen.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/FungusAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/EatScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
         <option value="$PROJECT_DIR$/src/roguelike/items/Item.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java" />
       </list>
     </option>
   </component>
@@ -339,7 +339,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533857544360" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533858127377" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -405,13 +405,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00115" summary="Update creature wander so they don't hurt each other">
-      <created>1533495451982</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1533495451982</updated>
     </task>
     <task id="LOCAL-00116" summary="Add name to creature, update constructors to use name">
       <created>1533495670993</created>
@@ -749,7 +742,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533857190905</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="Put atk/def values and getters/setters in Item class">
+      <created>1533857563546</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1533857563546</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TodoView">
@@ -825,7 +825,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create method to add lines to inventory action screen" />
     <MESSAGE value="Add method to respond to input at inventory screen" />
     <MESSAGE value="Add drop screen and implement methods from parent class" />
     <MESSAGE value="Fix typos" />
@@ -850,7 +849,8 @@
     <MESSAGE value="Add modifyFood to actions to increase hunger each turn" />
     <MESSAGE value="Fix modifyHP so it's impossible for currentHP to go over maxHP" />
     <MESSAGE value="Fix modifyHP so currentHP can't exceed maxHP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix modifyHP so currentHP can't exceed maxHP" />
+    <MESSAGE value="Put atk/def values and getters/setters in Item class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Put atk/def values and getters/setters in Item class" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1038,16 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/EatScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1094,7 +1084,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/items/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
+        <state relative-caret-position="1280">
           <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
           <folding>
             <element signature="e#313#314#0" expanded="true" />
@@ -1121,6 +1111,16 @@
             <element signature="e#1041#1042#0" expanded="true" />
             <element signature="e#1197#1198#0" expanded="true" />
             <element signature="e#1235#1236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="781">
+          <caret line="94" column="20" lean-forward="true" selection-start-line="94" selection-start-column="20" selection-end-line="94" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
