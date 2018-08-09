@@ -52,7 +52,7 @@ public class PlayScreen implements Screen {
 
     private void createItems(StuffFactory stuffFactory) {
         for (int z = 0; z < world.getDepth(); z++) {
-            for (int i = 0; i < (world.getWidth() * world.getHeight()) / 8; i++) {
+            for (int i = 0; i < 8; i++) {
                 stuffFactory.newRock(z);
                 stuffFactory.randomArmor(z);
                 stuffFactory.randomWeapon(z);
