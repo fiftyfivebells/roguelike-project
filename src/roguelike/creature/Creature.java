@@ -123,6 +123,7 @@ public class Creature {
         doAction("drop a " + item.getName());
         inventory.remove(item);
         world.addAtEmptySpace(item, x, y, z);
+        unequip(item);
     }
 
     private void unequip(Item item) {
@@ -226,8 +227,13 @@ public class Creature {
     }
 
     public void eat(Item item) {
+        if (item.getFoodValue() == 0) {
+            notify("Yuck!");
+        }
+
         modifyFood(item.getFoodValue());
         inventory.remove(item);
+        unequip(item);
     }
 
     private void leaveCorpse() {
