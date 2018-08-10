@@ -182,6 +182,7 @@ public class PlayScreen implements Screen {
                     break;
                 case KeyEvent.VK_D: subscreen = new DropScreen(player); break;
                 case KeyEvent.VK_E: subscreen = new EatScreen(player); break;
+                case KeyEvent.VK_W: subscreen = new EquipScreen(player); break;
             }
 
             switch (key.getKeyChar()) {

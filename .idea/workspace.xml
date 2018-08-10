@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Make equip/unequip public instead of private">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Make an equip screen for wearing items">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,14 +30,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="18" />
-          <entry key="java" value="19512" />
-          <entry key="txt" value="5122" />
+          <entry key="java" value="19563" />
+          <entry key="txt" value="5173" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="19512" />
-          <entry key="PLAIN_TEXT" value="5140" />
+          <entry key="JAVA" value="19563" />
+          <entry key="PLAIN_TEXT" value="5191" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -84,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+            <state relative-caret-position="261">
+              <caret line="184" column="79" selection-start-line="184" selection-start-column="79" selection-end-line="184" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,7 +138,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/EquipScreen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
@@ -269,9 +270,9 @@
         <option value="$PROJECT_DIR$/src/roguelike/screens/EatScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/items/Item.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/EquipScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
       </list>
     </option>
   </component>
@@ -344,7 +345,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533863289570" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533863527331" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -410,13 +411,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00127" summary="Change cf to sf and call createItems in screen setup">
-      <created>1533504452191</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1533504452191</updated>
     </task>
     <task id="LOCAL-00128" summary="Fix typo">
       <created>1533504629070</created>
@@ -754,7 +748,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533863233148</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="Make an equip screen for wearing items">
+      <created>1533863323482</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1533863323482</updated>
+    </task>
+    <option name="localTasksCounter" value="177" />
     <servers />
   </component>
   <component name="TodoView">
@@ -770,7 +771,7 @@
     <frame x="-1" y="31" width="1922" height="1049" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945235" visible="true" weight="0.20726496" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945235" visible="true" weight="0.20726496" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -779,7 +780,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50054765" side_tool="true" weight="0.1965812" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32968238" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32968238" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978093" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -830,7 +831,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add D to key event checks" />
     <MESSAGE value="Fix typo" />
     <MESSAGE value="Add food value getter and modifier to Item class" />
     <MESSAGE value="Update creatures to leave a corpse with a food value" />
@@ -855,7 +855,8 @@
     <MESSAGE value="Unequip item if it gets eaten or dropped" />
     <MESSAGE value="Update atk/def getters to add weapon/armor values" />
     <MESSAGE value="Make equip/unequip public instead of private" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make equip/unequip public instead of private" />
+    <MESSAGE value="Make an equip screen for wearing items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make an equip screen for wearing items" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1092,16 +1093,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1142,6 +1133,16 @@
             <element signature="e#306#307#0" expanded="true" />
             <element signature="e#369#370#0" expanded="true" />
             <element signature="e#446#447#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="184" column="79" selection-start-line="184" selection-start-column="79" selection-end-line="184" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
