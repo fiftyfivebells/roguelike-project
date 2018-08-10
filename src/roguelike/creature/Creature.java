@@ -83,11 +83,19 @@ public class Creature {
 
     public int getCurrentFood() { return currentFood; }
 
-    public int getAttackValue() { return attackValue; }
+    public int getAttackValue() {
+        return attackValue
+            + (weapon == null ? 0 : weapon.getAttackValue())
+            + (armor == null ? 0 : armor.getAttackValue());
+    }
 
     public void setAttackValue(int attackValue) { this.attackValue = attackValue; }
 
-    public int getDefenseValue() { return defenseValue; }
+    public int getDefenseValue() {
+        return defenseValue
+            + (armor == null ? 0 : armor.getDefenseValue())
+            + (weapon == null ? 0 : weapon.getDefenseValue());
+    }
 
     public void setDefenseValue(int defenseValue) { this.defenseValue = defenseValue; }
 
