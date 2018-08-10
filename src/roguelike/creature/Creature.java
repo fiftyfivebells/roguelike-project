@@ -125,6 +125,32 @@ public class Creature {
         world.addAtEmptySpace(item, x, y, z);
     }
 
+    private void unequip(Item item) {
+        if (item == null) { return; }
+
+        if (item == armor) {
+            doAction("remove a " + item.getName());
+            armor = null;
+        } else if (item == weapon) {
+            doAction("put away a " + item.getName());
+            weapon = null;
+        }
+    }
+
+    private void equip(Item item) {
+        if (item.getAttackValue() == 0 && item.getDefenseValue() == 0) { return; }
+
+        if (item.getAttackValue() >= item.getDefenseValue()) {
+            unequip(weapon);
+            doAction("wield a " + item.getName());
+            weapon = item;
+        } else {
+            unequip(armor);
+            doAction("put on a " + item.getName());
+            armor = item;
+        }
+    }
+
     public void dig(int wx, int wy, int wz) {
         modifyFood(-10);
         world.dig(wx, wy, wz);
