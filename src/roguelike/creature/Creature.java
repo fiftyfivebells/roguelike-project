@@ -134,7 +134,7 @@ public class Creature {
         unequip(item);
     }
 
-    private void unequip(Item item) {
+    public void unequip(Item item) {
         if (item == null) { return; }
 
         if (item == armor) {
@@ -146,7 +146,7 @@ public class Creature {
         }
     }
 
-    private void equip(Item item) {
+    public void equip(Item item) {
         if (item.getAttackValue() == 0 && item.getDefenseValue() == 0) { return; }
 
         if (item.getAttackValue() >= item.getDefenseValue()) {
