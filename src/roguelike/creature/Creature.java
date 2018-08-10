@@ -26,7 +26,11 @@ public class Creature {
     private int attackValue;
     private int defenseValue;
     private int visionRadius;
+
     private Inventory inventory;
+    private Item weapon;
+    private Item armor;
+
 
     public Creature(World world, char glyph, String name, Color color, int hp, int atk, int def) {
         this.world = world;
@@ -58,6 +62,10 @@ public class Creature {
     public void setY(int y) { this.y = y; }
 
     public void setZ(int z) { this.z = z; }
+
+    public Item getWeapon() { return weapon; }
+
+    public Item getArmor() { return armor; }
 
     public int getVisionRadius() { return visionRadius; }
 
