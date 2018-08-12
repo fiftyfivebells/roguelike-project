@@ -4,6 +4,7 @@ import asciiPanel.AsciiPanel;
 import roguelike.creature.creatures.BatAI;
 import roguelike.creature.creatures.FungusAI;
 import roguelike.creature.creatures.PlayerAI;
+import roguelike.creature.creatures.ZombieAI;
 import roguelike.items.Item;
 import roguelike.world.World;
 
@@ -38,6 +39,13 @@ public class StuffFactory {
         world.addAtEmptyLocation(bat, depth);
         new BatAI(bat);
         return bat;
+    }
+
+    public Creature newZombie(int depth, Creature player) {
+        Creature zombie = new Creature(world, 'z', "zombie", AsciiPanel.white, 50, 10, 10);
+        world.addAtEmptyLocation(zombie, depth);
+        new ZombieAI(zombie, player);
+        return zombie;
     }
 
     public Item newRock(int depth) {
