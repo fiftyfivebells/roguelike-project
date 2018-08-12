@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Add the PathFinder class and all methods">
+    <list default="true" id="31954160-1ca3-41bb-ab3e-a7ea2a77b14b" name="Default" comment="Make Path class">
+      <change afterPath="$PROJECT_DIR$/src/roguelike/creature/creatures/ZombieAI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,25 +30,25 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="18" />
-          <entry key="java" value="22229" />
-          <entry key="txt" value="5248" />
+          <entry key="java" value="22767" />
+          <entry key="txt" value="5263" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="22229" />
-          <entry key="PLAIN_TEXT" value="5266" />
+          <entry key="JAVA" value="22767" />
+          <entry key="PLAIN_TEXT" value="5281" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="24" />
+          <entry key="java" value="25" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="24" />
+          <entry key="JAVA" value="25" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -97,7 +98,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Path.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
@@ -109,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/roguelike/world/WorldBuilder.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/roguelike/creature/creatures/ZombieAI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3920">
-              <caret line="203" column="32" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
+            <state relative-caret-position="520">
+              <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -278,6 +279,7 @@
         <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/PathFinder.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/Path.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/ZombieAI.java" />
       </list>
     </option>
   </component>
@@ -324,6 +326,14 @@
               <item name="roguelike" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="roguelike" type="462c0819:PsiDirectoryNode" />
+              <item name="creature" type="462c0819:PsiDirectoryNode" />
+              <item name="creatures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roguelike" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roguelike" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="roguelike" type="462c0819:PsiDirectoryNode" />
               <item name="items" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -342,7 +352,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534096035566" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534096396030" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -408,13 +418,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00130" summary="Add new Inventory class">
-      <created>1533505574718</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1533505574718</updated>
     </task>
     <task id="LOCAL-00131" summary="Make methods to add, remove, and check if full">
       <created>1533505848039</created>
@@ -752,7 +755,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534095819862</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="Make Path class">
+      <created>1534096048231</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1534096048231</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TodoView">
@@ -828,7 +838,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update creatures to leave a corpse with a food value" />
     <MESSAGE value="Add food values and getters/setters for those values" />
     <MESSAGE value="Give creatures an eat method" />
     <MESSAGE value="Initialize maxFood and currentFood in constructor" />
@@ -853,7 +862,8 @@
     <MESSAGE value="Make an equip screen for wearing items" />
     <MESSAGE value="Add key event for wear/wield" />
     <MESSAGE value="Add the PathFinder class and all methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add the PathFinder class and all methods" />
+    <MESSAGE value="Make Path class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make Path class" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1161,6 +1171,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/creatures/ZombieAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
