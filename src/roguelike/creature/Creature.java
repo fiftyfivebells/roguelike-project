@@ -26,6 +26,8 @@ public class Creature {
     private int attackValue;
     private int defenseValue;
     private int visionRadius;
+    private int level;
+    private int xp;
 
     private Inventory inventory;
     private Item weapon;
@@ -62,6 +64,23 @@ public class Creature {
     public void setY(int y) { this.y = y; }
 
     public void setZ(int z) { this.z = z; }
+
+    public int getXp() { return xp;}
+
+    public void modifyXp(int amount) {
+        xp += amount;
+
+        notify("You %s %d xp.", amount < 0 ? "lose" : "gain", amount);
+
+        while (xp > (int) (Math.pow(level, 1.5) * 20)) {
+            level++;
+            doAction("advance to level %d", level);
+            ai.onGainLevel();
+            modifyHP(level * 2);
+        }
+    }
+
+    public int getLevel() { return level; }
 
     public Item getWeapon() { return weapon; }
 
