@@ -21,14 +21,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1323" />
-          <entry key="txt" value="261" />
+          <entry key="java" value="1467" />
+          <entry key="txt" value="308" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1323" />
-          <entry key="PLAIN_TEXT" value="261" />
+          <entry key="JAVA" value="1467" />
+          <entry key="PLAIN_TEXT" value="308" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -114,8 +114,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/levelUpOptions/LevelUpController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state relative-caret-position="440">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding>
+                <element signature="e#866#867#0" expanded="true" />
+                <element signature="e#911#912#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -268,7 +272,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534201026306" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534201147872" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -292,13 +296,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00140" summary="Add method to respond to input at inventory screen">
-      <created>1533510378408</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1533510378408</updated>
     </task>
     <task id="LOCAL-00141" summary="Fix typo">
       <created>1533510435433</created>
@@ -636,7 +633,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534200714202</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add controller to give level up options">
+      <created>1534201043327</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1534201043327</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -703,7 +707,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix modifyHP so currentHP can't exceed maxHP" />
     <MESSAGE value="Put atk/def values and getters/setters in Item class" />
     <MESSAGE value="Create some weapons and armors in the factory" />
     <MESSAGE value="Add factories for making random weapons/armors" />
@@ -728,7 +731,8 @@
     <MESSAGE value="Add gainXP method to add XP to creature on kills" />
     <MESSAGE value="Create abstract class representing level-up option" />
     <MESSAGE value="Move LevelUpOption into its own package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move LevelUpOption into its own package" />
+    <MESSAGE value="Add controller to give level up options" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add controller to give level up options" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1007,8 +1011,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/creature/levelUpOptions/LevelUpController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        <state relative-caret-position="440">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
