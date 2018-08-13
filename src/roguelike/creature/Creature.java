@@ -47,6 +47,7 @@ public class Creature {
         this.visionRadius = 9;
         this.name = name;
         this.inventory = new Inventory(20);
+        this.level = 1;
     }
 
     public int getX() {
