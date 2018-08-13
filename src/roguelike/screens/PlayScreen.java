@@ -151,6 +151,8 @@ public class PlayScreen implements Screen {
 
     @Override
     public Screen respondToUserInput(KeyEvent key) {
+        int level = player.getLevel();
+
         if (subscreen != null) {
             subscreen = subscreen.respondToUserInput(key);
         } else {
@@ -212,6 +214,10 @@ public class PlayScreen implements Screen {
 
         if (player.getCurrentHP() < 1) {
             return new LoseScreen();
+        }
+
+        if (player.getLevel() > level) {
+            subscreen = new LevelUpScreen(player, player.getLevel() - level);
         }
 
         return this;
