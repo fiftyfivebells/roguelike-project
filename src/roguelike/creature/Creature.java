@@ -193,8 +193,23 @@ public class Creature {
 
         other.modifyHP(-amount);
 
+        if (other.getCurrentHP() < 1) {
+            gainXP(other);
+        }
+
         doAction("attack the %s for %d damage", other.getName(), amount);
         modifyFood(-10);
+    }
+
+    public void gainXP(Creature creature) {
+        int amount = creature.getMaxHP()
+                + creature.getAttackValue()
+                + creature.getDefenseValue()
+                - (level * 2);
+
+        if (amount > 0) {
+            modifyXp(amount);
+        }
     }
 
     public void doAction(String message, Object ... params) {
