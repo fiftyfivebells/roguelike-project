@@ -244,6 +244,27 @@ public class Creature {
         return builder.toString().trim();
     }
 
+    public void gainMaxHP() {
+        maxHP += 10;
+        currentHP += 10;
+        doAction("look healthier");
+    }
+
+    public void gainAttackValue() {
+        attackValue += 2;
+        doAction("look stronger");
+    }
+
+    public void gainDefenseValue() {
+        defenseValue += 2;
+        doAction("look tougher");
+    }
+
+    public void gainVisionRadius() {
+        visionRadius += 1;
+        doAction("look more aware");
+    }
+
     public void modifyHP(int amount) {
         currentHP += amount;
 
