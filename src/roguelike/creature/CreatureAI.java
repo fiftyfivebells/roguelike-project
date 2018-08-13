@@ -1,5 +1,6 @@
 package roguelike.creature;
 
+import roguelike.creature.levelUpOptions.LevelUpController;
 import roguelike.world.Line;
 import roguelike.world.Point;
 import roguelike.world.Tile;
@@ -38,6 +39,10 @@ public class CreatureAI {
         } else {
             creature.doAction("bump into a wall");
         }
+    }
+
+    public void onGainLevel() {
+        new LevelUpController().autoLevelUp(creature);
     }
 
     public void wander() {
