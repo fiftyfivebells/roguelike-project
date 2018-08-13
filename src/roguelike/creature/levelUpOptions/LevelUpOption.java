@@ -1,4 +1,6 @@
-package roguelike.creature;
+package roguelike.creature.levelUpOptions;
+
+import roguelike.creature.Creature;
 
 public abstract class LevelUpOption {
     private String name;
