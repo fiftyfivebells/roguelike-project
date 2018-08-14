@@ -208,16 +208,17 @@ public class PlayScreen implements Screen {
                     break;
             }
         }
+
+        if (player.getLevel() > level) {
+            subscreen = new LevelUpScreen(player, player.getLevel() - level);
+        }
+
         if (subscreen == null) {
             world.update();
         }
 
         if (player.getCurrentHP() < 1) {
             return new LoseScreen();
-        }
-
-        if (player.getLevel() > level) {
-            subscreen = new LevelUpScreen(player, player.getLevel() - level);
         }
 
         return this;
