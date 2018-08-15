@@ -68,4 +68,12 @@ public class TargetBasedScreen implements Screen {
 
         return this;
     }
+
+    public boolean isAcceptable(int x, int y) {
+        return true;
+    }
+
+    public void enterWorldCoordinate(int x, int y, int screenX, int screenY){}
+
+    public void selectWorldCoordinate(int x, int y, int screenX, int screenY){}
 }

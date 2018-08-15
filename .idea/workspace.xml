@@ -22,14 +22,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5460" />
-          <entry key="txt" value="888" />
+          <entry key="java" value="5681" />
+          <entry key="txt" value="938" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5460" />
-          <entry key="PLAIN_TEXT" value="888" />
+          <entry key="JAVA" value="5681" />
+          <entry key="PLAIN_TEXT" value="938" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -161,10 +161,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/TargetBasedScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="66" column="83" selection-start-line="66" selection-start-column="83" selection-end-line="66" selection-end-column="83" />
+            <state relative-caret-position="520">
+              <caret line="77" column="79" selection-start-line="77" selection-start-column="79" selection-end-line="77" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2107#2108#0" expanded="true" />
+                <element signature="e#2128#2129#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -263,7 +265,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534296742751" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534296876094" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -307,13 +309,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00153" summary="Fix typo">
-      <created>1533513221348</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1533513221348</updated>
     </task>
     <task id="LOCAL-00154" summary="Add food value getter and modifier to Item class">
       <created>1533854055619</created>
@@ -651,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534296584643</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Add method to react to user input in target screen">
+      <created>1534296762065</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1534296762065</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -718,7 +720,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Make an equip screen for wearing items" />
     <MESSAGE value="Add key event for wear/wield" />
     <MESSAGE value="Add the PathFinder class and all methods" />
     <MESSAGE value="Make Path class" />
@@ -743,7 +744,8 @@
     <MESSAGE value="Add details method to describe the item" />
     <MESSAGE value="Create new class to act as a target choosing screen" />
     <MESSAGE value="Display line to target on screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Display line to target on screen" />
+    <MESSAGE value="Add method to react to user input in target screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add method to react to user input in target screen" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1089,10 +1091,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/TargetBasedScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="66" column="83" selection-start-line="66" selection-start-column="83" selection-end-line="66" selection-end-column="83" />
+        <state relative-caret-position="520">
+          <caret line="77" column="79" selection-start-line="77" selection-start-column="79" selection-end-line="77" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2107#2108#0" expanded="true" />
+            <element signature="e#2128#2129#0" expanded="true" />
           </folding>
         </state>
       </provider>
