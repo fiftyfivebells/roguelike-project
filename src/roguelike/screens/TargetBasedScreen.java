@@ -38,6 +38,34 @@ public class TargetBasedScreen implements Screen {
 
     @Override
     public Screen respondToUserInput(KeyEvent key) {
-        return null;
+
+        int px = x;
+        int py = y;
+
+        switch (key.getKeyCode()) {
+            case KeyEvent.VK_LEFT:
+            case KeyEvent.VK_H: x--; break;
+            case KeyEvent.VK_RIGHT:
+            case KeyEvent.VK_L: x++; break;
+            case KeyEvent.VK_UP:
+            case KeyEvent.VK_J: y--; break;
+            case KeyEvent.VK_DOWN:
+            case KeyEvent.VK_K: y++; break;
+            case KeyEvent.VK_Y: x--; y--; break;
+            case KeyEvent.VK_U: x++; y--; break;
+            case KeyEvent.VK_B: x--; y++; break;
+            case KeyEvent.VK_N: x++; y++; break;
+            case KeyEvent.VK_ENTER: selectWorldCoordinate(player.x + x, player.y + y, sx + x, sy + y); return null;
+            case KeyEvent.VK_ESCAPE: return null;
+        }
+
+        if (isAcceptable(player.getX() + x, player.getY() + y)) {
+            x = px;
+            y = py;
+        }
+
+        enterWorldCoordinate(player.getX() + x, player.getY() + y, sx + x, sy + y);
+
+        return this;
     }
 }
