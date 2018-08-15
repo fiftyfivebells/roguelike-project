@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="07d527d0-62fe-4fa7-adde-5690ab637d1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/screens/TargetBasedScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/screens/TargetBasedScreen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,24 +22,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4710" />
-          <entry key="txt" value="704" />
+          <entry key="java" value="5252" />
+          <entry key="txt" value="855" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4710" />
-          <entry key="PLAIN_TEXT" value="704" />
+          <entry key="JAVA" value="5252" />
+          <entry key="PLAIN_TEXT" value="855" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="9" />
+          <entry key="java" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="10" />
         </counts>
       </usages-collector>
     </session>
@@ -66,18 +66,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="680">
               <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="264" column="34" selection-start-line="264" selection-start-column="34" selection-end-line="264" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,7 +145,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/items/Item.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="520">
@@ -165,6 +153,20 @@
               <folding>
                 <element signature="e#948#949#0" expanded="true" />
                 <element signature="e#982#983#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/roguelike/screens/TargetBasedScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#660#661#0" expanded="true" />
+                <element signature="e#687#688#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -205,6 +207,7 @@
         <option value="$PROJECT_DIR$/src/roguelike/screens/HelpScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/ExamineScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/items/Item.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/screens/TargetBasedScreen.java" />
       </list>
     </option>
   </component>
@@ -262,7 +265,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534296321722" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534296569505" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -306,20 +309,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00150" summary="Remove unnecessary key event checks">
-      <created>1533512169115</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1533512169115</updated>
-    </task>
-    <task id="LOCAL-00151" summary="Change spawn rate of fungi">
-      <created>1533512861234</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1533512861234</updated>
     </task>
     <task id="LOCAL-00152" summary="Add D to key event checks">
       <created>1533512886744</created>
@@ -650,7 +639,21 @@
       <option name="project" value="LOCAL" />
       <updated>1534296050970</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add details method to describe the item">
+      <created>1534296206651</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1534296206651</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Create new class to act as a target choosing screen">
+      <created>1534296384155</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1534296384155</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -717,8 +720,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Unequip item if it gets eaten or dropped" />
-    <MESSAGE value="Update atk/def getters to add weapon/armor values" />
     <MESSAGE value="Make equip/unequip public instead of private" />
     <MESSAGE value="Make an equip screen for wearing items" />
     <MESSAGE value="Add key event for wear/wield" />
@@ -742,7 +743,9 @@
     <MESSAGE value="Check for level up before updating world" />
     <MESSAGE value="Add new HelpScreen class" />
     <MESSAGE value="Make ExamineScreen class to look at inventory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make ExamineScreen class to look at inventory" />
+    <MESSAGE value="Add details method to describe the item" />
+    <MESSAGE value="Create new class to act as a target choosing screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create new class to act as a target choosing screen" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1082,6 +1085,18 @@
           <folding>
             <element signature="e#948#949#0" expanded="true" />
             <element signature="e#982#983#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/screens/TargetBasedScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#687#688#0" expanded="true" />
           </folding>
         </state>
       </provider>
