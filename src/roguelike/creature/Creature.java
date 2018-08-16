@@ -341,11 +341,31 @@ public class Creature {
     }
 
     public Creature creature(int wx, int wy, int wz) {
-        return world.placeCreature(wx, wy, wz);
+        if (canSee(wx, wy, wz)) {
+            return world.placeCreature(wx, wy, wz);
+        } else {
+            return null;
+        }
     }
 
+    public Tile realTile(int wx, int wy, int wz) { return world.tile(wx, wy, wz); }
+
     public Tile tile(int wx, int wy, int wz) {
-        return world.tile(wx, wy, wz);
+
+        if (canSee(wx, wy, wz)) {
+            return world.tile(wx, wy, wz);
+        } else {
+            return ai.rememberedTile(wx, wy, wz);
+        }
+
+    }
+
+    public Item item(int wx, int wy, int wz) {
+        if (canSee(wx, wy, wz)) {
+            world.item(wx, wy, wz);
+        } else {
+            return null;
+        }
     }
 
     public boolean canSee(int wx, int wy, int wz) {

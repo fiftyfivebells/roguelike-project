@@ -4,7 +4,6 @@
     <list default="true" id="07d527d0-62fe-4fa7-adde-5690ab637d1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/world/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/world/Tile.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,14 +22,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6650" />
-          <entry key="txt" value="1102" />
+          <entry key="java" value="7001" />
+          <entry key="txt" value="1150" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6650" />
-          <entry key="PLAIN_TEXT" value="1102" />
+          <entry key="JAVA" value="7001" />
+          <entry key="PLAIN_TEXT" value="1150" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -103,22 +102,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+            <state relative-caret-position="376">
+              <caret line="366" column="24" selection-start-line="366" selection-start-column="24" selection-end-line="366" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#9430#9431#0" expanded="true" />
+                <element signature="e#9474#9475#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/world/Tile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
+            <state relative-caret-position="500">
               <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -193,6 +194,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>tile</find>
+      <find>public tile</find>
+      <find>public Item</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -211,8 +219,8 @@
         <option value="$PROJECT_DIR$/src/roguelike/items/Item.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/TargetBasedScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/LookScreen.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/Tile.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
       </list>
     </option>
   </component>
@@ -270,7 +278,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534381181973" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/stephen/Programming/roguelike/src/roguelike/world/Tile.java" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534381531263" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -314,13 +323,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00156" summary="Add food values and getters/setters for those values">
-      <created>1533856273367</created>
-      <option name="number" value="00156" />
-      <option name="presentableId" value="LOCAL-00156" />
-      <option name="project" value="LOCAL" />
-      <updated>1533856273367</updated>
     </task>
     <task id="LOCAL-00157" summary="Give creatures an eat method">
       <created>1533856344722</created>
@@ -658,7 +660,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534297202050</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Add details to creature and tile classes">
+      <created>1534381202225</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1534381202226</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -725,7 +734,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add zombie AI that hunts the player" />
     <MESSAGE value="Add a zombie maker method to the factory" />
     <MESSAGE value="Update playScreen to add zombies on each depth" />
     <MESSAGE value="Add xp and level, with methods to get and modify them" />
@@ -750,7 +758,8 @@
     <MESSAGE value="Create placeholder methods for children to use later" />
     <MESSAGE value="Add look screen class to look at things on the map" />
     <MESSAGE value="Add look screen class to look at tiles on the map" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add look screen class to look at tiles on the map" />
+    <MESSAGE value="Add details to creature and tile classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add details to creature and tile classes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1098,22 +1107,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
+    <entry file="file://$PROJECT_DIR$/src/roguelike/world/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+        <state relative-caret-position="500">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/world/Tile.java">
+    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        <state relative-caret-position="376">
+          <caret line="366" column="24" selection-start-line="366" selection-start-column="24" selection-end-line="366" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#9430#9431#0" expanded="true" />
+            <element signature="e#9474#9475#0" expanded="true" />
           </folding>
         </state>
       </provider>
