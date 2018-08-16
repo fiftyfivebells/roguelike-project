@@ -23,12 +23,16 @@ public class CreatureAI {
         }
 
         for (Point p : new Line(creature.getX(), creature.getY(), wx, wy)) {
-            if (creature.tile(p.getX(), p.getY(), wz).isGround() || p.getX() == wx && p.getY() == wy) {
+            if (creature.realTile(p.getX(), p.getY(), wz).isGround() || p.getX() == wx && p.getY() == wy) {
                 continue;
             }
             return false;
         }
         return true;
+    }
+
+    public Tile rememberedTile(int wx, int wy, int wz) {
+        return Tile.UNKNOWN;
     }
 
     public void onEnter(int x, int y, int z, Tile tile) {
