@@ -11,7 +11,7 @@ public class ExamineScreen extends InventoryBasedScreen {
 
     @Override
     protected String getVerb() {
-        return "examine"l
+        return "examine";
     }
 
     @Override

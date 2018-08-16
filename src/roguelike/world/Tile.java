@@ -34,5 +34,4 @@ public enum Tile {
         return this != Tile.WALL && this != Tile.BOUNDS;
     }
 
-    }
 }

@@ -362,7 +362,7 @@ public class Creature {
 
     public Item item(int wx, int wy, int wz) {
         if (canSee(wx, wy, wz)) {
-            world.item(wx, wy, wz);
+            return world.item(wx, wy, wz);
         } else {
             return null;
         }
