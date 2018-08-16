@@ -35,6 +35,11 @@ public class PlayerAI extends CreatureAI {
     }
 
     @Override
+    public Tile rememberedTile(int wx, int wy, int wz) {
+        return fov.tile(wx, wy, wz);
+    }
+
+    @Override
     public void onGainLevel() {}
 
     public void onNotify(String message) {
