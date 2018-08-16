@@ -103,6 +103,10 @@ public class Creature {
 
     public int getCurrentFood() { return currentFood; }
 
+    public String details() {
+        return String.format("  level: %d   attack: %d  defense: %d     hp: %d", level, attackValue, defenseValue, currentHP);
+    }
+
     public int getAttackValue() {
         return attackValue
             + (weapon == null ? 0 : weapon.getAttackValue())
