@@ -2,6 +2,8 @@ package roguelike.creature;
 
 import roguelike.items.Inventory;
 import roguelike.items.Item;
+import roguelike.world.Line;
+import roguelike.world.Point;
 import roguelike.world.Tile;
 import roguelike.world.World;
 
@@ -365,6 +367,42 @@ public class Creature {
             return world.item(wx, wy, wz);
         } else {
             return null;
+        }
+    }
+
+    public void throwItem(Item item, int wx, int wy, int wz) {
+        Point end = new Point(x, y, 0);
+
+        for (Point p : new Line(x, y, wx, wy)) {
+            if (!realTile(p.getX(), p.getY()).isGround()) { break; }
+
+            end = p;
+        }
+
+        wx = end.getX();
+        wy = end.getY();
+
+        Creature c = creature(wx, wy, wz);
+
+        if (c!= null) {
+            throwAttack(item, c);
+        } else {
+            doAction("throw a %s", item.getName());
+        }
+    }
+
+    private void throwAttack(Item item, Creature creature) {
+        modifyFood(-1);
+
+        int amount = Math.max(0, attackValue / 2 + item.getThrownAttackValue() - creature.getDefenseValue());
+
+        amount = (int) (Math.random() * amount) + 1;
+
+        doAction("throw a %s for %d damage", item.getName(), amount);
+        creature.modifyHP(-amount);
+
+        if (creature.getCurrentHP() < 1) {
+            gainXP(creature);
         }
     }
 
