@@ -10,6 +10,7 @@ public class Item {
     private int foodValue;
     private int attackValue;
     private int defenseValue;
+    private int thrownAttackValue;
 
     public Item(char glyph, Color color, String name) {
         this.glyph = glyph;
@@ -49,13 +50,15 @@ public class Item {
         foodValue += amount;
     }
 
-    public int getAttackValue() {
-        return attackValue;
-    }
+    public int getAttackValue() { return attackValue; }
 
     public void modifyAttackValue(int amount) {
         attackValue += amount;
     }
+
+    public int getThrownAttackValue() { return thrownAttackValue; }
+
+    public void modifyThrownAttackValue(int amount) { thrownAttackValue += amount; }
 
     public int getDefenseValue() {
         return defenseValue;
