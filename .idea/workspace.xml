@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="07d527d0-62fe-4fa7-adde-5690ab637d1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/items/Item.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,24 +22,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7560" />
-          <entry key="txt" value="1559" />
+          <entry key="java" value="8682" />
+          <entry key="txt" value="1655" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7560" />
-          <entry key="PLAIN_TEXT" value="1559" />
+          <entry key="JAVA" value="8682" />
+          <entry key="PLAIN_TEXT" value="1655" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="16" />
+          <entry key="java" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="16" />
+          <entry key="JAVA" value="17" />
         </counts>
       </usages-collector>
     </session>
@@ -50,18 +49,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3620">
-              <caret line="193" column="91" selection-start-line="193" selection-start-column="91" selection-end-line="193" selection-end-column="91" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/HelpScreen.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,8 +64,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6940">
-              <caret line="364" column="19" selection-start-line="364" selection-start-column="19" selection-end-line="364" selection-end-column="19" />
+            <state relative-caret-position="821">
+              <caret line="406" column="5" lean-forward="true" selection-start-line="406" selection-start-column="5" selection-end-line="406" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#10639#10640#0" expanded="true" />
+                <element signature="e#10683#10684#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/roguelike/screens/ThrowAtScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,7 +142,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/items/Item.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="761">
@@ -210,10 +211,11 @@
         <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/PlayerAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/world/Tile.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/ExamineScreen.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/TargetBasedScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/items/Item.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/screens/ThrowAtScreen.java" />
       </list>
     </option>
   </component>
@@ -272,7 +274,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/stephen/Programming/roguelike/src/roguelike/world/Tile.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534384238058" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534506380624" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/rl tut 15" />
   </component>
   <component name="RunDashboard">
@@ -317,20 +319,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00162" summary="Add modifyFood to actions to increase hunger each turn">
-      <created>1533857104966</created>
-      <option name="number" value="00162" />
-      <option name="presentableId" value="LOCAL-00162" />
-      <option name="project" value="LOCAL" />
-      <updated>1533857104966</updated>
-    </task>
-    <task id="LOCAL-00163" summary="Fix modifyHP so currentHP can't exceed maxHP">
-      <created>1533857190905</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1533857190905</updated>
     </task>
     <task id="LOCAL-00164" summary="Put atk/def values and getters/setters in Item class">
       <created>1533857563546</created>
@@ -661,7 +649,21 @@
       <option name="project" value="LOCAL" />
       <updated>1534384288956</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Add thrown attack value and methods to Item">
+      <created>1534505079880</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1534505079881</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Add methods to throw and throw as an attack">
+      <created>1534505933294</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1534505933294</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -728,8 +730,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Move LevelUpOption into its own package" />
-    <MESSAGE value="Add controller to give level up options" />
     <MESSAGE value="Add method to level up AI automatically" />
     <MESSAGE value="Add autoLevelUp method to creatureAI" />
     <MESSAGE value="Create methods to handle level up bonuses" />
@@ -753,7 +753,9 @@
     <MESSAGE value="Override playerAI rememberedTile method" />
     <MESSAGE value="Fix typos" />
     <MESSAGE value="Add key events for looking, help, and examining" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add key events for looking, help, and examining" />
+    <MESSAGE value="Add thrown attack value and methods to Item" />
+    <MESSAGE value="Add methods to throw and throw as an attack" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add methods to throw and throw as an attack" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -976,6 +978,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
+          <folding>
+            <element signature="e#135#136#0" expanded="true" />
+            <element signature="e#167#168#0" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -993,6 +1001,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1194#1202#0" expanded="true" />
+            <element signature="e#1229#1230#0" expanded="true" />
+            <element signature="e#1309#1310#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1010,16 +1024,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6940">
-          <caret line="364" column="19" selection-start-line="364" selection-start-column="19" selection-end-line="364" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1100,6 +1104,28 @@
           <folding>
             <element signature="e#1256#1257#0" expanded="true" />
             <element signature="e#1291#1292#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="406" column="5" lean-forward="true" selection-start-line="406" selection-start-column="5" selection-end-line="406" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10639#10640#0" expanded="true" />
+            <element signature="e#10683#10684#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/screens/ThrowAtScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
