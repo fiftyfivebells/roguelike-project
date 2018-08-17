@@ -374,7 +374,7 @@ public class Creature {
         Point end = new Point(x, y, 0);
 
         for (Point p : new Line(x, y, wx, wy)) {
-            if (!realTile(p.getX(), p.getY()).isGround()) { break; }
+            if (!realTile(p.getX(), p.getY(), z).isGround()) { break; }
 
             end = p;
         }
