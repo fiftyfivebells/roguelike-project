@@ -23,14 +23,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10111" />
-          <entry key="txt" value="1937" />
+          <entry key="java" value="10112" />
+          <entry key="txt" value="1978" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10111" />
-          <entry key="PLAIN_TEXT" value="1937" />
+          <entry key="JAVA" value="10112" />
+          <entry key="PLAIN_TEXT" value="1978" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -152,8 +152,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="117" column="41" selection-start-line="117" selection-start-column="41" selection-end-line="117" selection-end-column="41" />
+            <state relative-caret-position="360">
+              <caret line="114" column="40" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -283,7 +283,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/stephen/Programming/roguelike/src/roguelike/world/Tile.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534559640623" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534559678726" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/rl tut 15" />
   </component>
   <component name="RunDashboard">
@@ -328,13 +328,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00171" summary="Add weapon/armor variables and getter/setter">
-      <created>1533862000321</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1533862000321</updated>
     </task>
     <task id="LOCAL-00172" summary="Add methods for equipping/removing items">
       <created>1533862336349</created>
@@ -672,7 +665,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534559610646</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Add bows to random weapon creator method">
+      <created>1534559655740</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1534559655740</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -739,7 +739,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Make ExamineScreen class to look at inventory" />
     <MESSAGE value="Add details method to describe the item" />
     <MESSAGE value="Create new class to act as a target choosing screen" />
     <MESSAGE value="Display line to target on screen" />
@@ -764,7 +763,8 @@
     <MESSAGE value="Add fire weapon screen class" />
     <MESSAGE value="Add ranged attack value and methods to Item class" />
     <MESSAGE value="Add bow creating method to stuff factory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add bow creating method to stuff factory" />
+    <MESSAGE value="Add bows to random weapon creator method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add bows to random weapon creator method" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1162,8 +1162,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="117" column="41" selection-start-line="117" selection-start-column="41" selection-end-line="117" selection-end-column="41" />
+        <state relative-caret-position="360">
+          <caret line="114" column="40" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

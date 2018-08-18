@@ -112,7 +112,7 @@ public class StuffFactory {
     }
 
     public Item randomWeapon (int depth) {
-        switch ((int) (Math.random() * 4)) {
+        switch ((int) (Math.random() * 3)) {
             case 0: return newDagger(depth);
             case 1: return newSword(depth);
             case 2: return newBow(depth);
