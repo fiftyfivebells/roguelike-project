@@ -406,6 +406,20 @@ public class Creature {
         }
     }
 
+    public void rangedWeaponAttack(Creature other) {
+        modifyFood(-1);
+
+        int amount = Math.max(0, attackValue / 2 + weapon.getRangedAttackValue() - other.getDefenseValue());
+        amount = (int) (Math.random() * amount) + 1;
+
+        doAction("fire a %s at the %s for %d damage", weapon.getName(), other.getName(), amount);
+        other.modifyHP(-amount);
+
+        if (other.getCurrentHP() < 1) {
+            gainXP(other);
+        }
+    }
+
     public boolean canSee(int wx, int wy, int wz) {
         return ai.canSee(wx, wy, wz);
     }
