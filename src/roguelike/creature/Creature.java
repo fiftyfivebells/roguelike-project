@@ -420,6 +420,17 @@ public class Creature {
         }
     }
 
+    private void getRidOf(Item item) {
+        inventory.remove(item);
+        unequip(item);
+    }
+
+    private void putAt(Item item, int wx, int wy, int wz) {
+        inventory.remove(item);
+        unequip(item);
+        world.addAtEmptySpace(item, wx, wy, wz);
+    }
+
     public boolean canSee(int wx, int wy, int wz) {
         return ai.canSee(wx, wy, wz);
     }
