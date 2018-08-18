@@ -82,6 +82,14 @@ public class StuffFactory {
         return item;
     }
 
+    public Item newBow(int depth) {
+        Item item = new Item(')', AsciiPanel.brightBlue, "bow");
+        item.modifyRangedAttackValue(5);
+        item.modifyAttackValue(1);
+        world.addAtEmptyLocation(item, depth);
+        return item;
+    }
+
     public Item newLightArmor(int depth) {
         Item item = new Item('[', AsciiPanel.green, "tunic");
         item.modifyDefenseValue(2);

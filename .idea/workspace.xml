@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="07d527d0-62fe-4fa7-adde-5690ab637d1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,24 +23,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="9945" />
-          <entry key="txt" value="1843" />
+          <entry key="java" value="10078" />
+          <entry key="txt" value="1895" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9945" />
-          <entry key="PLAIN_TEXT" value="1843" />
+          <entry key="JAVA" value="10078" />
+          <entry key="PLAIN_TEXT" value="1895" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="20" />
+          <entry key="java" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="20" />
+          <entry key="JAVA" value="21" />
         </counts>
       </usages-collector>
     </session>
@@ -119,18 +119,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/roguelike/world/Tile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/ExamineScreen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -146,7 +134,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/items/Item.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
@@ -156,6 +144,18 @@
                 <element signature="e#1447#1448#0" expanded="true" />
                 <element signature="e#1448#1449#0" expanded="true" />
                 <element signature="e#1483#1484#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -224,6 +224,7 @@
         <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/FireWeaponScreen.java" />
         <option value="$PROJECT_DIR$/src/roguelike/items/Item.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java" />
       </list>
     </option>
   </component>
@@ -282,7 +283,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/stephen/Programming/roguelike/src/roguelike/world/Tile.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534559476075" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534559595217" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/rl tut 15" />
   </component>
   <component name="RunDashboard">
@@ -327,13 +328,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00169" summary="Fix typo in item creation methods">
-      <created>1533858633787</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1533858633787</updated>
     </task>
     <task id="LOCAL-00170" summary="Fix createItems to only make 8 of each per level">
       <created>1533858807054</created>
@@ -671,7 +665,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534559395506</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Add ranged attack value and methods to Item class">
+      <created>1534559489335</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1534559489335</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -738,7 +739,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Check for level up before updating world" />
     <MESSAGE value="Add new HelpScreen class" />
     <MESSAGE value="Make ExamineScreen class to look at inventory" />
     <MESSAGE value="Add details method to describe the item" />
@@ -763,7 +763,8 @@
     <MESSAGE value="Fix typo" />
     <MESSAGE value="Add missing argument to method" />
     <MESSAGE value="Add fire weapon screen class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add fire weapon screen class" />
+    <MESSAGE value="Add ranged attack value and methods to Item class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ranged attack value and methods to Item class" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -830,6 +831,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -958,16 +962,6 @@
             <element signature="e#292#293#0" expanded="true" />
             <element signature="e#355#356#0" expanded="true" />
             <element signature="e#402#403#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1162,6 +1156,16 @@
             <element signature="e#1447#1448#0" expanded="true" />
             <element signature="e#1448#1449#0" expanded="true" />
             <element signature="e#1483#1484#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/StuffFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
