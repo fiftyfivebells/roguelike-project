@@ -192,19 +192,9 @@ public class Creature {
         doAction("dig");
     }
 
-    public void attack(Creature other) {
-        int amount = Math.max(0, getAttackValue() - other.getDefenseValue());
-
-        amount = (int) (Math.random() * amount) + 1;
-
-        other.modifyHP(-amount);
-
-        if (other.getCurrentHP() < 1) {
-            gainXP(other);
-        }
-
-        doAction("attack the %s for %d damage", other.getName(), amount);
-        modifyFood(-10);
+    public void meleeAttack(Creature other) {
+        commonAttack(other, getAttackValue(), "attack the %s for %d damage.",
+                other.getName());
     }
 
     public void gainXP(Creature creature) {
@@ -338,7 +328,7 @@ public class Creature {
         if (other == null) {
             ai.onEnter(x+mx, y+my, z+mz, tile);
         } else {
-            attack(other);
+            meleeAttack(other);
         }
     }
 
@@ -391,28 +381,30 @@ public class Creature {
         }
     }
 
-    private void throwAttack(Item item, Creature creature) {
-        modifyFood(-1);
-
-        int amount = Math.max(0, attackValue / 2 + item.getThrownAttackValue() - creature.getDefenseValue());
-
-        amount = (int) (Math.random() * amount) + 1;
-
-        doAction("throw a %s for %d damage", item.getName(), amount);
-        creature.modifyHP(-amount);
-
-        if (creature.getCurrentHP() < 1) {
-            gainXP(creature);
-        }
+    public void throwAttack(Item item, Creature creature) {
+        commonAttack(creature, attackValue / 2 + item.getThrownAttackValue(), "throw a %s at the %s for %d damage",
+                item.getName(), creature.getName());
     }
 
     public void rangedWeaponAttack(Creature other) {
-        modifyFood(-1);
+        commonAttack(other, attackValue / 2 + weapon.getRangedAttackValue(), "fire a %s at the %s for %d damage",
+                weapon.getName(), other.getName());
+    }
 
-        int amount = Math.max(0, attackValue / 2 + weapon.getRangedAttackValue() - other.getDefenseValue());
+    private void commonAttack(Creature other, int attack, String action, Object ... params) {
+        modifyFood(-2);
+
+        int amount = Math.max(0, attack - other.getDefenseValue());
         amount = (int) (Math.random() * amount) + 1;
 
-        doAction("fire a %s at the %s for %d damage", weapon.getName(), other.getName(), amount);
+        Object[] params2 = new Object[params.length + 1];
+        for (int i = 0; i < params.length; i++) {
+            params2[i] = params[i];
+        }
+        params2[params2.length - 1] = amount;
+
+        doAction(action, params2);
+
         other.modifyHP(-amount);
 
         if (other.getCurrentHP() < 1) {

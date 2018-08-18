@@ -23,14 +23,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10988" />
-          <entry key="txt" value="2110" />
+          <entry key="java" value="11832" />
+          <entry key="txt" value="2164" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10988" />
-          <entry key="PLAIN_TEXT" value="2110" />
+          <entry key="JAVA" value="11832" />
+          <entry key="PLAIN_TEXT" value="2164" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -77,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="430" column="47" selection-start-line="430" selection-start-column="47" selection-end-line="430" selection-end-column="47" />
+            <state relative-caret-position="3880">
+              <caret line="378" column="16" lean-forward="true" selection-start-line="378" selection-start-column="16" selection-end-line="378" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#10639#10640#0" expanded="true" />
@@ -279,7 +279,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/stephen/Programming/roguelike/src/roguelike/world/Tile.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534560392034" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534561054166" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/rl tut 15" />
   </component>
   <component name="RunDashboard">
@@ -324,13 +324,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00176" summary="Make an equip screen for wearing items">
-      <created>1533863323482</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1533863323482</updated>
     </task>
     <task id="LOCAL-00177" summary="Add key event for wear/wield">
       <created>1533863544671</created>
@@ -668,7 +661,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534560227013</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Add methods to remove or place an item">
+      <created>1534560450593</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1534560450593</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -735,7 +735,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add method to react to user input in target screen" />
     <MESSAGE value="Create placeholder methods for children to use later" />
     <MESSAGE value="Add look screen class to look at things on the map" />
     <MESSAGE value="Add look screen class to look at tiles on the map" />
@@ -760,7 +759,8 @@
     <MESSAGE value="Add method for firing ranged weapon" />
     <MESSAGE value="Add fire weapon key to playscreen key events" />
     <MESSAGE value="Add throwing and firing to the help screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add throwing and firing to the help screen" />
+    <MESSAGE value="Add methods to remove or place an item" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add methods to remove or place an item" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1156,8 +1156,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="430" column="47" selection-start-line="430" selection-start-column="47" selection-end-line="430" selection-end-column="47" />
+        <state relative-caret-position="3880">
+          <caret line="378" column="16" lean-forward="true" selection-start-line="378" selection-start-column="16" selection-end-line="378" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#10639#10640#0" expanded="true" />
