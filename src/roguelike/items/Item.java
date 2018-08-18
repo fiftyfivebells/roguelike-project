@@ -11,6 +11,7 @@ public class Item {
     private int attackValue;
     private int defenseValue;
     private int thrownAttackValue;
+    private int rangedAttackValue;
 
     public Item(char glyph, Color color, String name) {
         this.glyph = glyph;
@@ -59,6 +60,12 @@ public class Item {
     public int getThrownAttackValue() { return thrownAttackValue; }
 
     public void modifyThrownAttackValue(int amount) { thrownAttackValue += amount; }
+
+    public int getRangedAttackValue() { return rangedAttackValue; }
+
+    public void modifyRangedAttackValue(int amount) {
+        rangedAttackValue += amount;
+    }
 
     public int getDefenseValue() {
         return defenseValue;
