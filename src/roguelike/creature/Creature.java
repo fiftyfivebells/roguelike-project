@@ -30,6 +30,8 @@ public class Creature {
     private int visionRadius;
     private int level;
     private int xp;
+    private int regenHPCooldown;
+    private int regenHPper1000;
 
     private Inventory inventory;
     private Item weapon;
@@ -50,6 +52,8 @@ public class Creature {
         this.name = name;
         this.inventory = new Inventory(20);
         this.level = 1;
+        this.regenHPper1000 = 10;
+        this.regenHPCooldown = 1000;
     }
 
     public int getX() {
@@ -80,6 +84,19 @@ public class Creature {
             doAction("advance to level %d", level);
             ai.onGainLevel();
             modifyHP(level * 2);
+        }
+    }
+
+    public void modifyRegenHPper1000(int amount) {
+        regenHPper1000 += amount;
+    }
+
+    private void regenerateHealth() {
+        regenHPCooldown -= regenHPper1000;
+        if (regenHPCooldown < 0) {
+            modifyHP(1);
+            modifyFood(-1);
+            regenHPCooldown += 1000;
         }
     }
 
