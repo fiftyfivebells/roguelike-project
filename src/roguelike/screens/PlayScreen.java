@@ -51,6 +51,10 @@ public class PlayScreen implements Screen {
             for (int i = 0; i < z + 5; i++) {
                 stuffFactory.newZombie(z, player);
             }
+
+            for (int i = 0; i < z + 7l i++) {
+                stuffFactory.newGoblin(z, player);
+            }
         }
     }
 
