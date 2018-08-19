@@ -466,6 +466,7 @@ public class Creature {
 
     public void update() {
         modifyFood(-1);
+        regenerateHealth();
         ai.onUpdate();
     }
 
