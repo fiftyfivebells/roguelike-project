@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="07d527d0-62fe-4fa7-adde-5690ab637d1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/Creature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roguelike/creature/creatures/GoblinAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roguelike/creature/creatures/GoblinAI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,14 +24,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="15026" />
-          <entry key="txt" value="2676" />
+          <entry key="java" value="15050" />
+          <entry key="txt" value="2707" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="15026" />
-          <entry key="PLAIN_TEXT" value="2676" />
+          <entry key="JAVA" value="15050" />
+          <entry key="PLAIN_TEXT" value="2707" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -63,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
@@ -106,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/creature/creatures/GoblinAI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="300">
+              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -194,6 +194,7 @@
       <find>public tile</find>
       <find>public Item</find>
       <find>leavecorpse</find>
+      <find>update</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,8 +222,8 @@
         <option value="$PROJECT_DIR$/src/roguelike/world/World.java" />
         <option value="$PROJECT_DIR$/src/roguelike/items/Inventory.java" />
         <option value="$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java" />
-        <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/GoblinAI.java" />
         <option value="$PROJECT_DIR$/src/roguelike/creature/Creature.java" />
+        <option value="$PROJECT_DIR$/src/roguelike/creature/creatures/GoblinAI.java" />
       </list>
     </option>
   </component>
@@ -296,7 +297,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/stephen/Programming/roguelike/src/roguelike/world/Tile.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534645069946" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534645306341" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/rl tut 15" />
   </component>
   <component name="RunDashboard">
@@ -341,13 +342,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Add controller to give level up options">
-      <created>1534201043327</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1534201043327</updated>
     </task>
     <task id="LOCAL-00008" summary="Add method to level up AI automatically">
       <created>1534201163096</created>
@@ -685,7 +679,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534645048385</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Add regenerate method to update">
+      <created>1534645082800</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1534645082801</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -752,7 +753,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add methods to throw and throw as an attack" />
     <MESSAGE value="Create screen for throwing items at a target" />
     <MESSAGE value="Create inventory screen for throwing items" />
     <MESSAGE value="Add key event for throwing items" />
@@ -777,7 +777,8 @@
     <MESSAGE value="Add helper methods for behavior prioritization" />
     <MESSAGE value="Add methods to let goblins check and use better stuff" />
     <MESSAGE value="Add regen variables and methods to creatures" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add regen variables and methods to creatures" />
+    <MESSAGE value="Add regenerate method to update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add regenerate method to update" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1157,16 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/creatures/GoblinAI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/creature/Creature.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -1175,6 +1166,16 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2039#2040#0" expanded="true" />
             <element signature="e#2071#2072#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roguelike/creature/creatures/GoblinAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

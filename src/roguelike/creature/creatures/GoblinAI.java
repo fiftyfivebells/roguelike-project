@@ -17,9 +17,6 @@ public class GoblinAI extends CreatureAI {
     }
 
     public void onUpdate() {
-        if (canUseBetterEquipment()) {
-            useBetterEquipment();
-        }
 
         if (canRangedWeaponAttack(player)) {
             creature.rangedWeaponAttack(player);
@@ -29,6 +26,9 @@ public class GoblinAI extends CreatureAI {
             hunt(player);
         } else if (canPickUp()) {
             creature.pickup();
+            if (canUseBetterEquipment()) {
+                useBetterEquipment();
+            }
         } else {
             wander();
         }
