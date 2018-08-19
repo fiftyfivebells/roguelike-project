@@ -24,14 +24,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="13290" />
-          <entry key="txt" value="2421" />
+          <entry key="java" value="13291" />
+          <entry key="txt" value="2460" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="13290" />
-          <entry key="PLAIN_TEXT" value="2421" />
+          <entry key="JAVA" value="13291" />
+          <entry key="PLAIN_TEXT" value="2460" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -54,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+            <state relative-caret-position="186">
+              <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -294,7 +294,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/stephen/Programming/roguelike/src/roguelike/world/Tile.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534643244676" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534643274121" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/rl tut 15" />
   </component>
   <component name="RunDashboard">
@@ -339,13 +339,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532298271829</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Update playScreen to add zombies on each depth">
-      <created>1534097084729</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1534097084729</updated>
     </task>
     <task id="LOCAL-00002" summary="Add xp and level, with methods to get and modify them">
       <created>1534200323256</created>
@@ -683,7 +676,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534643151115</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Add goblins to creature creator method">
+      <created>1534643260076</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1534643260076</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -699,7 +699,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50054765" side_tool="true" weight="0.1965812" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32968238" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32968238" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978093" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -707,7 +707,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32968238" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32968238" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -750,7 +750,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update AI to use realTile method and add rememberedTile" />
     <MESSAGE value="Override playerAI rememberedTile method" />
     <MESSAGE value="Fix typos" />
     <MESSAGE value="Add key events for looking, help, and examining" />
@@ -775,7 +774,8 @@
     <MESSAGE value="Add method to remove an item from the world" />
     <MESSAGE value="Add contains method to inventory" />
     <MESSAGE value="Make sure monsters drop what they're carrying on death" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make sure monsters drop what they're carrying on death" />
+    <MESSAGE value="Add goblins to creature creator method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add goblins to creature creator method" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/WinScreen.java">
@@ -1167,8 +1167,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roguelike/screens/PlayScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+        <state relative-caret-position="186">
+          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
