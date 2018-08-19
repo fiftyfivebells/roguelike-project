@@ -17,6 +17,10 @@ public class GoblinAI extends CreatureAI {
     }
 
     public void onUpdate() {
+        if (canUseBetterEquipment()) {
+            useBetterEquipment();
+        }
+
         if (canRangedWeaponAttack(player)) {
             creature.rangedWeaponAttack(player);
         } else if (canThrowAttack(player)) {
@@ -59,6 +63,39 @@ public class GoblinAI extends CreatureAI {
     private boolean canPickUp() {
         return creature.item(creature.getX(), creature.getY(), creature.getZ()) != null
                 && !creature.getInventory().isFull();
+    }
+
+    protected boolean canUseBetterEquipment() {
+        int currentWeaponRating = creature.getWeapon() == null ? 0 : creature.getWeapon().getAttackValue() + creature.getWeapon().getRangedAttackValue();
+        int currentArmorRating = creature.getArmor() == null ? 0 : creature.getArmor().getDefenseValue() + creature.getWeapon().getDefenseValue();
+
+        for (Item item : creature.getInventory().getItems()) {
+            if (item == null) { continue; }
+
+            boolean isArmor = item.getAttackValue() + item.getRangedAttackValue() < item.getDefenseValue();
+
+            if (item.getAttackValue() + item.getRangedAttackValue() > currentWeaponRating
+                || isArmor && item.getDefenseValue() > currentArmorRating) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    protected void useBetterEquipment() {
+        int currentWeaponRating = creature.getWeapon() == null ? 0 : creature.getWeapon().getAttackValue() + creature.getWeapon().getRangedAttackValue();
+        int currentArmorRating = creature.getArmor() == null ? 0 : creature.getArmor().getDefenseValue() + creature.getWeapon().getDefenseValue();
+
+        for (Item item : creature.getInventory().getItems()) {
+            if (item == null) { continue; }
+
+            boolean isArmor = item.getAttackValue() + item.getRangedAttackValue() < item.getDefenseValue();
+
+            if (item.getAttackValue() + item.getRangedAttackValue() > currentWeaponRating
+                    || isArmor && item.getDefenseValue() > currentArmorRating) {
+                creature.equip(item);
+            }
+        }
     }
 
     public void hunt(Creature target) {
