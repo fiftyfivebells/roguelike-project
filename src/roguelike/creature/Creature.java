@@ -173,6 +173,16 @@ public class Creature {
     }
 
     public void equip(Item item) {
+        if (!inventory.contains(item)) {
+            if (inventory.isFull()) {
+                notify("Can't equip %s because you're holding too much stuff.", item.getName());
+                return;
+            } else {
+                world.remove(item);
+                inventory.add(item);
+            }
+        }
+
         if (item.getAttackValue() == 0 && item.getDefenseValue() == 0) { return; }
 
         if (item.getAttackValue() >= item.getDefenseValue()) {
