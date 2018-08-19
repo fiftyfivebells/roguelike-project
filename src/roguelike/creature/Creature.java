@@ -310,6 +310,11 @@ public class Creature {
         Item corpse = new Item('%', color, name + " corpse");
         corpse.modifyFoodValue(3 * maxHP);
         world.addAtEmptySpace(corpse, x, y, z);
+        for (Item item : inventory.getItems()) {
+            if (item != null) {
+                drop(item);
+            }
+        }
     }
 
     public void moveBy(int mx, int my, int mz) {
