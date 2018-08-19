@@ -16,8 +16,14 @@ public class GoblinAI extends CreatureAI {
     }
 
     public void onUpdate() {
-        if (creature.canSee(player.getX(), player.getY(), player.getZ())) {
+        if (canRangedWeaponAttack(player)) {
+            creature.rangedWeaponAttack(player);
+        } else if (canThrowAttack(player)) {
+            creature.throwItem(getWeaponToThrow(), player.getX(), player.getY(), player.getZ());
+        } else if (creature.canSee(player.getX(), player.getY(), player.getZ())) {
             hunt(player);
+        } else if (canPickUp()) {
+            creature.pickup();
         } else {
             wander();
         }
