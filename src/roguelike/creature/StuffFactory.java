@@ -1,10 +1,7 @@
 package roguelike.creature;
 
 import asciiPanel.AsciiPanel;
-import roguelike.creature.creatures.BatAI;
-import roguelike.creature.creatures.FungusAI;
-import roguelike.creature.creatures.PlayerAI;
-import roguelike.creature.creatures.ZombieAI;
+import roguelike.creature.creatures.*;
 import roguelike.items.Item;
 import roguelike.world.World;
 
@@ -46,6 +43,15 @@ public class StuffFactory {
         world.addAtEmptyLocation(zombie, depth);
         new ZombieAI(zombie, player);
         return zombie;
+    }
+
+    public Creature newGoblin(int depth, Creature player) {
+        Creature goblin = new Creature(world, 'g', "goblin", AsciiPanel.brightYellow, 66, 15, 5);
+        goblin.equip(randomWeapon(depth));
+        goblin.equip(randomArmor(depth));
+        world.addAtEmptyLocation(goblin, depth);
+        new GoblinAI(goblin, player);
+        return goblin;
     }
 
     public Item newRock(int depth) {
